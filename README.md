@@ -1,4 +1,4 @@
-markdown-index-generator
+md-index-generator
 ========================
 
 Parses a markdown document and creates an index based on headings
