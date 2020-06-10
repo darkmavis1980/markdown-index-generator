@@ -1,10 +1,10 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "author": "Alessio Michelini",
   "bin": {
-    "mig": "./bin/run"
+    "md-index-generator": "./bin/run"
   },
   "bugs": "https://github.com/experimental/markdown-index-generator/issues",
   "dependencies": {
@@ -42,7 +42,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
-    "bin": "mig"
+    "bin": "md-index-generator"
   },
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {

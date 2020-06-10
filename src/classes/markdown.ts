@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import {stringToPermalink} from '../lib/utils'
+import {isFileValid} from '../lib/file'
 
 export default class MarkdownParser {
   /**
@@ -14,6 +15,9 @@ export default class MarkdownParser {
   private title = '## Index\n\n'
 
   constructor(file: string) {
+    if (!isFileValid(file)) {
+      throw new Error('File is not valid')
+    }
     this.file = file
     this.headings = []
   }

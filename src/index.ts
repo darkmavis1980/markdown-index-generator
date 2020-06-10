@@ -2,7 +2,7 @@ import {Command, flags} from '@oclif/command'
 import MarkDownParser from './classes/markdown'
 
 class MarkdownIndexGenerator extends Command {
-  static description = 'describe the command here'
+  static description = 'Reads a MarkDown file and generate an index using the headings'
 
   static flags = {
     // add --version flag to show CLI version
@@ -16,26 +16,33 @@ class MarkdownIndexGenerator extends Command {
     title: flags.string({char: 't', description: 'Title to add on top of the index, by default is \'## Index\''}),
   }
 
-  static args = [{name: 'file'}, {name: 'output'}]
+  static args = [{name: 'file', description: 'The input file to parse'}]
 
   async run() {
     const {args, flags} = this.parse(MarkdownIndexGenerator)
+    try {
+      if (!args.file) {
+        return this.error('Missing file to parse')
+      }
 
-    const parser = new MarkDownParser(args.file)
-    if (flags.depth) {
-      parser.setDepth(flags.depth)
-    }
-    if (flags.title) {
-      parser.setTitle(flags.title)
-    }
-    this.log('Parsing file')
-    await parser.parse()
-    if (flags.output) {
-      parser.toFile(flags.output)
-    } else {
-      this.log('--- Begin MarkDown ---')
-      this.log(parser.toView())
-      this.log('--- End Markdown ---')
+      const parser = new MarkDownParser(args.file)
+      if (flags.depth) {
+        parser.setDepth(flags.depth)
+      }
+      if (flags.title) {
+        parser.setTitle(flags.title)
+      }
+      await parser.parse()
+      if (flags.output) {
+        parser.toFile(flags.output)
+        this.log(`File ${flags.output} saved!`)
+      } else {
+        this.log('--- Begin MarkDown ---')
+        this.log(parser.toView())
+        this.log('--- End Markdown ---')
+      }
+    } catch (error) {
+      this.error(error.message)
     }
   }
 }
