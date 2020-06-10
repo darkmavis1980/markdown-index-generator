@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -47,9 +47,7 @@
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
-    "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
   },
   "types": "lib/index.d.ts"
 }
