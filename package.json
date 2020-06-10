@@ -1,7 +1,7 @@
 {
-  "name": "markdown-index-generator",
+  "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Alessio Michelini",
   "bin": {
     "mig": "./bin/run"
@@ -35,7 +35,7 @@
     "/bin",
     "/lib"
   ],
-  "homepage": "https://github.com/experimental/markdown-index-generator",
+  "homepage": "https://github.com/darkmavis1980/markdown-index-generator",
   "keywords": [
     "oclif"
   ],
@@ -44,7 +44,7 @@
   "oclif": {
     "bin": "mig"
   },
-  "repository": "experimental/markdown-index-generator",
+  "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev readme",

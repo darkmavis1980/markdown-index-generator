@@ -15,11 +15,11 @@ Parses a markdown document and creates an index based on headings
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g markdown-index-generator
+$ npm install -g md-index-generator
 $ mig COMMAND
 running command...
 $ mig (-v|--version|version)
-markdown-index-generator/0.1.0 darwin-x64 node-v14.3.0
+md-index-generator/0.1.0 darwin-x64 node-v14.3.0
 $ mig --help [COMMAND]
 USAGE
   $ mig COMMAND
