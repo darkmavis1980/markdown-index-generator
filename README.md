@@ -19,7 +19,7 @@ $ npm install -g md-index-generator
 $ mig COMMAND
 running command...
 $ mig (-v|--version|version)
-md-index-generator/0.1.1 darwin-x64 node-v14.3.0
+md-index-generator/0.1.2 darwin-x64 node-v14.3.0
 $ mig --help [COMMAND]
 USAGE
   $ mig COMMAND
