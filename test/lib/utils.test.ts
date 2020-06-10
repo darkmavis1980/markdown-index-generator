@@ -1,5 +1,5 @@
 import {expect} from '@oclif/test'
-import {stringToPermalink} from '../../lib/lib/utils'
+import {stringToPermalink} from '../../src/lib/utils'
 
 describe('Utils', () => {
   describe('Utils', () => {
