@@ -4,9 +4,9 @@ md-index-generator
 Parses a markdown document and creates an index based on headings
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/markdown-index-generator.svg)](https://npmjs.org/package/md-index-generator)
-[![Downloads/week](https://img.shields.io/npm/dw/markdown-index-generator.svg)](https://npmjs.org/package/md-index-generator)
-[![License](https://img.shields.io/npm/l/markdown-index-generator.svg)](https://github.com/experimental/markdown-index-generator/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
+[![Downloads/week](https://img.shields.io/npm/dw/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
+[![License](https://img.shields.io/npm/l/md-index-generator.svg)](https://github.com/experimental/markdown-index-generator/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
