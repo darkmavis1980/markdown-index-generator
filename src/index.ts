@@ -14,6 +14,7 @@ class MarkdownIndexGenerator extends Command {
     depth: flags.integer({char: 'd', description: 'Depth of the headings to parse, 4 means \'till h4\'', default: 4}),
     // flag with a value (-t, --title=VALUE)
     title: flags.string({char: 't', description: 'Title to add on top of the index, by default is \'## Index\''}),
+    replace: flags.boolean({char: 'r', description: 'Add the index to the source file', default: false}),
   }
 
   static args = [{name: 'file', description: 'The input file to parse'}]
@@ -34,8 +35,11 @@ class MarkdownIndexGenerator extends Command {
       }
       await parser.parse()
       if (flags.output) {
-        parser.toFile(flags.output)
+        await parser.toFile(flags.output)
         this.log(`File ${flags.output} saved!`)
+      } else if (flags.replace) {
+        await parser.replaceOriginal()
+        this.log(`File ${args.file} updated!`)
       } else {
         this.log('--- Begin MarkDown ---')
         this.log(parser.toView())

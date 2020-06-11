@@ -1,12 +1,15 @@
-import * as fs from 'fs'
+import {promises as fs} from 'fs'
 import {stringToPermalink} from '../lib/utils'
 import {isFileValid} from '../lib/file'
+import {START_INJECT_TAG, END_INJECT_TAG} from '../constants'
 
 export default class MarkdownParser {
   /**
    * The MarkDown filename
    */
   private file: string
+
+  private fileCache: string
 
   /**
    * Container for the list of links
@@ -28,6 +31,7 @@ export default class MarkdownParser {
       throw new Error('File is not valid')
     }
     this.file = file
+    this.fileCache = ''
     this.links = []
   }
 
@@ -85,37 +89,59 @@ export default class MarkdownParser {
 
   /**
    * Main function parser that reads the file and returns list of links
-   * @returns {Promise} The promise with list of links
+   * @returns {string[]} The list of links
+   * @throws An Error exception
    */
-  parse(): Promise<string[]> {
-    return new Promise((resolve, reject) => {
-      fs
-      .createReadStream(this.file)
-      .on('data', data => {
-        const decoded = data.toString('utf8')
-        const markdown: string[] = decoded.split('\n')
-        const links = this.getHeadings(markdown)
-        const markup = this.parseHeadings(links)
-        this.links = markup
-      })
-      .on('error', error => reject(error))
-      .on('end', () => {
-        resolve(this.links)
-      })
-    })
+  async parse() {
+    try {
+      const data = await fs.readFile(this.file)
+      const decoded = data.toString('utf8')
+      this.fileCache = decoded
+      const markdown: string[] = decoded.split('\n')
+      const links = this.getHeadings(markdown)
+      this.links = this.parseHeadings(links)
+      return this.links
+    } catch (error) {
+      throw new Error(error.message)
+    }
   }
 
   /**
    * Save the ouput of the links in a file
    * @param {string} outputFile The filename where to store the output
+   * @throws An Error exception
    */
   async toFile(outputFile: string) {
+    this.fileCache = ''
     const data = `${this.title}${this.links.join('\n')}`
-    await fs.writeFile(outputFile, data, err => {
-      if (err) {
-        console.log(err)
+    try {
+      await fs.writeFile(outputFile, data)
+    } catch (error) {
+      throw new Error(error.message)
+    }
+  }
+
+  /**
+   * Replace the original source file by adding the index between the custom tags
+   * @returns {string} The data written
+   * @throws An Error exception
+   */
+  async replaceOriginal() {
+    try {
+      const tagStartPosition = this.fileCache.indexOf(START_INJECT_TAG)
+      const tagEndPosition = this.fileCache.indexOf(END_INJECT_TAG)
+      if (tagStartPosition === -1 || tagEndPosition === -1) {
+        throw new Error('You must add the index tags in the document!')
       }
-    })
+      const preTagContent = this.fileCache.slice(0, tagStartPosition + START_INJECT_TAG.length)
+      const postTagContent = this.fileCache.slice(tagEndPosition)
+      const data = `${this.title}${this.links.join('\n')}`
+      const fileData = `${preTagContent}\n${data}\n${postTagContent}`
+      await fs.writeFile(this.file, fileData)
+      this.fileCache = ''
+    } catch (error) {
+      throw new Error(error.message)
+    }
   }
 
   /**
@@ -123,6 +149,7 @@ export default class MarkdownParser {
    * @returns {string} The full output data
    */
   toView(): string {
+    this.fileCache = ''
     return `${this.title}${this.links.join('\n')}`
   }
 }
