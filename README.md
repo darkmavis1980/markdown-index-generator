@@ -23,16 +23,16 @@ md-index-generator/0.3.1 darwin-x64 node-v14.3.0
 $ md-index-generator <MarkDown.md>
 
 // Store the output in a file
-$ md-index-generator <MARKDOWNFILE.md> -o <Index.md>
+$ md-index-generator <MARKDOWNFILE.md> --output <Index.md>
 
 // Generate the index using only h2 and h3 headings
-$ md-index-generator <MarkDown.md> -d 3
+$ md-index-generator <MarkDown.md> --depth 3
 
 // Set the title of the index, output will start with "## Docs index"
-$ md-index-generator <MarkDown.md> -t "Docs index"
+$ md-index-generator <MarkDown.md> --title "Docs index"
 
 // Replace the passed markdown file
-
+$ md-index-generator <MarkDown.md> --replace
 ```
 
 ### Optional flags

@@ -110,6 +110,7 @@ export default class MarkdownParser {
    * Save the ouput of the links in a file
    * @param {string} outputFile The filename where to store the output
    * @throws An Error exception
+   * @returns {Promise} The resolved await fs function
    */
   async toFile(outputFile: string) {
     this.fileCache = ''
