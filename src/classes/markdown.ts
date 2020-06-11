@@ -8,10 +8,19 @@ export default class MarkdownParser {
    */
   private file: string
 
-  private headings: string[]
+  /**
+   * Container for the list of links
+   */
+  private links: string[]
 
-  private depth = 4
+  /**
+   * Depth of how many headings should be parsed, where 4 means h4, and maximum should be 5
+   */
+  public depth = 4
 
+  /**
+   * Default title of the index
+   */
   private title = '## Index\n\n'
 
   constructor(file: string) {
@@ -19,13 +28,23 @@ export default class MarkdownParser {
       throw new Error('File is not valid')
     }
     this.file = file
-    this.headings = []
+    this.links = []
   }
 
+  /**
+   * Set the index title
+   * @param {string} title Text for the title
+   * @returns {void}
+   */
   setTitle(title: string): void {
     this.title = `## ${title}\n\n`
   }
 
+  /**
+   * Set the depth for the generator
+   * @param {number} depth The depth value, a number between 2 and 5
+   * @returns {void}
+   */
   setDepth(depth: number): void {
     if (depth < 2 || depth > 5) {
       throw new Error('Depth value not valid')
@@ -33,14 +52,25 @@ export default class MarkdownParser {
     this.depth = depth
   }
 
+  /**
+   * Goes through each line passed, and filters out everything that is not an
+   * heading within the defined range
+   * @param {string[]} lines The array of lines found in the document
+   * @returns {string[]} The filtered out array
+   */
   getHeadings(lines: string[]): string[] {
     const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm')
     return lines
     .filter(line => line.match(regex))
   }
 
-  parseHeadings(headings: string[]): string[] {
-    return headings.map(heading => {
+  /**
+   * Will parse the headings and return the links format with indentation in base of the heading
+   * @param {string[]} links The list of headings to parse
+   * @returns {string[]} The list of links
+   */
+  parseHeadings(links: string[]): string[] {
+    return links.map(heading => {
       const textHeading: string = heading.replace(/#{2,5}\s/, '')
       if (textHeading.toLocaleLowerCase() === 'index') {
         return ''
@@ -53,6 +83,10 @@ export default class MarkdownParser {
     .filter(heading => heading !== '')
   }
 
+  /**
+   * Main function parser that reads the file and returns list of links
+   * @returns {Promise} The promise with list of links
+   */
   parse(): Promise<string[]> {
     return new Promise((resolve, reject) => {
       fs
@@ -60,19 +94,23 @@ export default class MarkdownParser {
       .on('data', data => {
         const decoded = data.toString('utf8')
         const markdown: string[] = decoded.split('\n')
-        const headings = this.getHeadings(markdown)
-        const markup = this.parseHeadings(headings)
-        this.headings = markup
+        const links = this.getHeadings(markdown)
+        const markup = this.parseHeadings(links)
+        this.links = markup
       })
       .on('error', error => reject(error))
       .on('end', () => {
-        resolve(this.headings)
+        resolve(this.links)
       })
     })
   }
 
+  /**
+   * Save the ouput of the links in a file
+   * @param {string} outputFile The filename where to store the output
+   */
   async toFile(outputFile: string) {
-    const data = `${this.title}${this.headings.join('\n')}`
+    const data = `${this.title}${this.links.join('\n')}`
     await fs.writeFile(outputFile, data, err => {
       if (err) {
         console.log(err)
@@ -80,7 +118,11 @@ export default class MarkdownParser {
     })
   }
 
+  /**
+   * Get the output of the parse and it returns it as a string
+   * @returns {string} The full output data
+   */
   toView(): string {
-    return `${this.title}${this.headings.join('\n')}`
+    return `${this.title}${this.links.join('\n')}`
   }
 }

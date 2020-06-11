@@ -35,5 +35,7 @@ $ md-index-generator <MarkDown.md> -t "Docs index"
 ### Optional flags
 
 `-o, --output <VALUE>` This takes an output file, where the parsed index will be stored instead of being shown in the shell
+
 `-d, --depth <VALUE>` This sets the depth, with a range between 2 and 5, so if sets to 3, it will parse the headings until H3, default value is 4
+
 `-t, --title <VALUE>` This set the title for the index list, by default is set to `Index`
