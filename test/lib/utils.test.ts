@@ -6,6 +6,11 @@ describe('Utils', () => {
     it('should return the url formatted string', () => {
       expect(stringToPermalink('Hello world')).to.equal('hello-world')
     })
+
+    it('should escape punctuation characters', () => {
+      expect(stringToPermalink('Hello, world')).to.equal('hello-world')
+      expect(stringToPermalink('Hello. World!')).to.equal('hello-world')
+    })
   })
 })
 
