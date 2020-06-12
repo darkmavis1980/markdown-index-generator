@@ -11,5 +11,6 @@ export function stringToPermalink(string: string): string {
 
   return string
   .replace(/\s/g, '-')
+  .replace(/[.,:?!;]/g, '')
   .toLowerCase()
 }
