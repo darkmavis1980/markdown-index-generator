@@ -17,7 +17,7 @@ $ npm install -g md-index-generator
 $ md-index-generator COMMAND
 running command...
 $ md-index-generator (-v|--version|version)
-md-index-generator/0.3.1 darwin-x64 node-v14.3.0
+md-index-generator/0.5.0 darwin-x64 node-v14.3.0
 
 // Display the output on the shell
 $ md-index-generator <MarkDown.md>
@@ -47,15 +47,15 @@ $ md-index-generator <MarkDown.md> --replace
 
 #### Add the index in the source file
 
-If you wish to modify the file you are passing as a source, you must add the tags `<!-- indexstart -->` and `<!-- indexend -->` in the markdown document. 
+If you wish to modify the file you are passing as a source, you must add the tags `<!-- index-start -->` and `<!-- index-end -->` in the markdown document.
 Here a sample:
 
 ```
 # Your Fancy document
 
-<!-- indexstart -->
+<!-- index-start -->
 The index will go here!
-<!-- indexend -->
+<!-- index-end -->
 
 ## Some more stuff
 
