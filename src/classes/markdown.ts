@@ -1,7 +1,8 @@
 import {promises as fs} from 'fs'
 import {stringToPermalink} from '../lib/utils'
 import {isFileValid} from '../lib/file'
-import {START_INJECT_TAG, END_INJECT_TAG} from '../constants'
+import {replaceTag} from '../lib/tags'
+import {INDEX_TAG} from '../constants'
 
 export default class MarkdownParser {
   /**
@@ -129,15 +130,8 @@ export default class MarkdownParser {
    */
   async replaceOriginal() {
     try {
-      const tagStartPosition = this.fileCache.indexOf(START_INJECT_TAG)
-      const tagEndPosition = this.fileCache.indexOf(END_INJECT_TAG)
-      if (tagStartPosition === -1 || tagEndPosition === -1) {
-        throw new Error('You must add the index tags in the document!')
-      }
-      const preTagContent = this.fileCache.slice(0, tagStartPosition + START_INJECT_TAG.length)
-      const postTagContent = this.fileCache.slice(tagEndPosition)
       const data = `${this.title}${this.links.join('\n')}`
-      const fileData = `${preTagContent}\n${data}\n${postTagContent}`
+      const fileData = replaceTag(this.fileCache, INDEX_TAG, data)
       await fs.writeFile(this.file, fileData)
       this.fileCache = ''
     } catch (error) {
