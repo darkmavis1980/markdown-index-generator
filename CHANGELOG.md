@@ -1,10 +1,21 @@
 # Changelog
 
+## [v0.5.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.1...v0.5.1) - 2020-06-30
+
+### Commits
+
+- Updated dependencies [`52a46ea`](https://github.com/darkmavis1980/markdown-index-generator/commit/52a46ea19986b01032c353a3a6d587295b005dfb)
+
 ## [v0.5.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.4.2...v0.5.0) - 2020-06-19
+
+### Merged
+
+- Feature/improve tag replacing code [`#3`](https://github.com/darkmavis1980/markdown-index-generator/pull/3)
 
 ### Commits
 
 - BREAKING CHANGE: changed how the tag for replace content is called [`40e0c4b`](https://github.com/darkmavis1980/markdown-index-generator/commit/40e0c4b2b00c8ec72605925bbd1f10635e237ef4)
+- Updated changelog [`864d6bf`](https://github.com/darkmavis1980/markdown-index-generator/commit/864d6bfc6a74078d88178f5e8a91cd1c4b3a3ed0)
 
 ## [v0.4.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.4.1...v0.4.2) - 2020-06-12
 
