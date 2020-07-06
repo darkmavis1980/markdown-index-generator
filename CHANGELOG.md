@@ -1,6 +1,15 @@
 # Changelog
 
-## [v0.5.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.1...v0.5.1) - 2020-06-30
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.2...HEAD)
+
+## [v0.5.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.1...v0.5.2) - 2020-07-06
+
+### Commits
+
+- Added missing npm scripts [`fc00c5b`](https://github.com/darkmavis1980/markdown-index-generator/commit/fc00c5b3628373fe3b9ecc497fd9d77fc140de5d)
+- Updated readme [`1cfdd43`](https://github.com/darkmavis1980/markdown-index-generator/commit/1cfdd43aac139c70db5f51d5e6aaedb8f5f35fdb)
+
+## [v0.5.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.0...v0.5.1) - 2020-06-30
 
 ### Commits
 
