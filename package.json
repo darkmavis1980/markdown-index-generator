@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -19,15 +19,15 @@
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
     "@types/node": "^14.0.14",
-    "auto-changelog": "^2.1.0",
+    "auto-changelog": "^2.2.0",
     "chai": "^4.2.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.2.0",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -47,7 +47,9 @@
   },
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:watch": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --watch --forbid-only \"test/**/*.test.ts\"",
     "changelog": "auto-changelog",
