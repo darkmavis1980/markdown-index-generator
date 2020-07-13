@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command'
 import MarkDownParser from './classes/markdown'
+import cli from 'cli-ux'
 
 class MarkdownIndexGenerator extends Command {
   static description = 'Reads a MarkDown file and generate an index using the headings'
@@ -21,11 +22,11 @@ class MarkdownIndexGenerator extends Command {
 
   async run() {
     const {args, flags} = this.parse(MarkdownIndexGenerator)
+    cli.action.start('Generating index')
     try {
       if (!args.file) {
         return this.error('Missing file to parse')
       }
-
       const parser = new MarkDownParser(args.file)
       if (flags.depth) {
         parser.setDepth(flags.depth)
@@ -48,6 +49,7 @@ class MarkdownIndexGenerator extends Command {
     } catch (error) {
       this.error(error.message)
     }
+    cli.action.stop()
   }
 }
 

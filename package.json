@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -17,8 +17,8 @@
     "@oclif/dev-cli": "^1.22.2",
     "@oclif/test": "^1.2.6",
     "@types/chai": "^4.2.11",
-    "@types/mocha": "^7.0.2",
-    "@types/node": "^14.0.14",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.22",
     "auto-changelog": "^2.2.0",
     "chai": "^4.2.0",
     "eslint": "^7.4.0",
