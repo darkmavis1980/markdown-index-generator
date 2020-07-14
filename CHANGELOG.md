@@ -1,6 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.2...HEAD)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.6.0...HEAD)
+
+## [v0.6.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.2...v0.6.0) - 2020-07-13
+
+### Commits
+
+- Added feedback if process takes long time to process [`8970abd`](https://github.com/darkmavis1980/markdown-index-generator/commit/8970abdd5b91d062911cc11003d30ab0ca2cf7ce)
+- Updated changelog [`37f15f8`](https://github.com/darkmavis1980/markdown-index-generator/commit/37f15f8a2c5f034bdf830364f9fa9756745caefc)
 
 ## [v0.5.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.5.1...v0.5.2) - 2020-07-06
 
