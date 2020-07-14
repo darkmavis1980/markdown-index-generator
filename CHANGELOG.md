@@ -1,6 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.6.0...HEAD)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.7.0...HEAD)
+
+## [v0.7.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.6.0...v0.7.0) - 2020-07-14
+
+### Merged
+
+- Added support for MDX format [`#4`](https://github.com/darkmavis1980/markdown-index-generator/pull/4)
 
 ### Commits
 
