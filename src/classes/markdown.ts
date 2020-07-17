@@ -70,6 +70,20 @@ export default class MarkdownParser {
   }
 
   /**
+   * Parse a text and try to find if it's a numbered list item or not
+   * @param {string} text The heading to parse
+   * @returns {string} The style according to the type
+   */
+  getListStyle(text: string): string {
+    const regex = /^(\d.\s)/
+    const match = text.match(regex)
+    if (match) {
+      return match[1]
+    }
+    return '- '
+  }
+
+  /**
    * Will parse the headings and return the links format with indentation in base of the heading
    * @param {string[]} links The list of headings to parse
    * @returns {string[]} The list of links
@@ -82,7 +96,8 @@ export default class MarkdownParser {
       }
       const hashes = (heading.match(/#/g) || []).length
       const indents = hashes <= 2 ? 0 : hashes - 2
-      const link = `${'  '.repeat(indents)}- [${textHeading}](#${stringToPermalink(textHeading)})`
+      const listStyle = this.getListStyle(textHeading)
+      const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`
       return link
     })
     .filter(heading => heading !== '')
