@@ -2,6 +2,7 @@ import {expect} from '@oclif/test'
 import MarkdownParser from '../../src/classes/markdown'
 
 const mockFile = './test/__mocks__/test.md'
+const mockNumberedFile = './test/__mocks__/numbered.md'
 
 describe('MarkdownParser (Class)', () => {
   describe('setTitle', () => {
@@ -58,6 +59,15 @@ describe('MarkdownParser (Class)', () => {
       expect(result.length).to.equal(2)
       expect(result[0]).to.equal('- [Heading 1](#heading-1)')
       expect(result[1]).to.equal('  - [Heading 2](#heading-2)')
+    })
+
+    it('should parse numbered heaedings', () => {
+      const parser = new MarkdownParser(mockNumberedFile)
+      const mockHeadings = ['## Index', '## 1. Heading 1', '## 2. Heading 2']
+      const result = parser.parseHeadings(mockHeadings)
+      expect(result.length).to.equal(2)
+      expect(result[0]).to.equal('1. [Heading 1](#1-heading-1)')
+      expect(result[1]).to.equal('2. [Heading 2](#2-heading-2)')
     })
   })
 
