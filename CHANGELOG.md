@@ -1,6 +1,16 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.7.0...HEAD)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.0...HEAD)
+
+## [v0.8.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.7.0...v0.8.0) - 2020-07-17
+
+### Merged
+
+- Added support for numbered lists [`#5`](https://github.com/darkmavis1980/markdown-index-generator/pull/5)
+
+### Commits
+
+- Updated docs [`9410733`](https://github.com/darkmavis1980/markdown-index-generator/commit/941073311162e7a6a1015f5db43b0f855accded4)
 
 ## [v0.7.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.6.0...v0.7.0) - 2020-07-14
 
