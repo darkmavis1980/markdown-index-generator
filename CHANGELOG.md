@@ -1,6 +1,15 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.0...HEAD)
+## [v0.8.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.0...v0.8.1) - 2020-07-19
+
+### Merged
+
+- Bump lodash from 4.17.15 to 4.17.19 [`#6`](https://github.com/darkmavis1980/markdown-index-generator/pull/6)
+
+### Commits
+
+- Updated changelog [`edf8b48`](https://github.com/darkmavis1980/markdown-index-generator/commit/edf8b4802868a170c86fb9809b8653d06fc56040)
+- Fixed minor bug with missin newline after index-end tag [`91bff78`](https://github.com/darkmavis1980/markdown-index-generator/commit/91bff788389436b9cd878e9ce6b943a98f74d677)
 
 ## [v0.8.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.7.0...v0.8.0) - 2020-07-17
 
