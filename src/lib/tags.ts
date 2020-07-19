@@ -8,5 +8,5 @@ export const replaceTag = (source: string, tag: string, content: string): string
   }
   const preTagContent = source.slice(0, tagStartPosition + start.length)
   const postTagContent = source.slice(tagEndPosition)
-  return `${preTagContent}\n${content}\n${postTagContent}`
+  return `${preTagContent}\n${content}\n${postTagContent}\n`
 }
