@@ -4,6 +4,7 @@
 
 ### Commits
 
+- Updated dependencies [`abb6191`](https://github.com/darkmavis1980/markdown-index-generator/commit/abb619193d189bcdf7eb8e5a2acfcb6d98e03423)
 - Updated changelog [`fa51802`](https://github.com/darkmavis1980/markdown-index-generator/commit/fa51802e0e9104298dba28c8abf5adfa1d34a3c0)
 
 ## [v0.8.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.2...v0.8.3) - 2020-08-18
