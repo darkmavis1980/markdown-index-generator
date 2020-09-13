@@ -1,10 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.4...HEAD)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.5...HEAD)
+
+## [v0.8.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.4...v0.8.5) - 2020-09-13
 
 ### Commits
 
 - Fixed security issues related to dependencies [`c1fb809`](https://github.com/darkmavis1980/markdown-index-generator/commit/c1fb809e511bf8e9ac4ecadf0989b776badaa5a1)
+- Updated changelog [`c9d2cd3`](https://github.com/darkmavis1980/markdown-index-generator/commit/c9d2cd3be29d493833d76330803d7a15133d6a4f)
 
 ## [v0.8.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.3...v0.8.4) - 2020-09-06
 
