@@ -1,6 +1,10 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.5...HEAD)
+## [v0.8.6](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.5...v0.8.6)
+
+### Commits
+
+- Fixed changelog [`27de701`](https://github.com/darkmavis1980/markdown-index-generator/commit/27de701bd233d78fa57538fb8b43063fa2a81f19)
 
 ## [v0.8.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.4...v0.8.5) - 2020-09-13
 
