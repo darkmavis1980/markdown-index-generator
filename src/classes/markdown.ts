@@ -1,7 +1,7 @@
 import {promises as fs} from 'fs'
 import {stringToPermalink} from '../lib/utils'
 import {isFileValid} from '../lib/file'
-import {replaceTag} from '../lib/tags'
+import {replaceTag, replaceBlock} from '../lib/tags'
 import {INDEX_TAG} from '../constants'
 
 export default class MarkdownParser {
@@ -111,7 +111,7 @@ export default class MarkdownParser {
   async parse() {
     try {
       const data = await fs.readFile(this.file)
-      const decoded = data.toString('utf8')
+      const decoded = replaceBlock(data.toString('utf8'), '```')
       this.fileCache = decoded
       const markdown: string[] = decoded.split('\n')
       const links = this.getHeadings(markdown)
