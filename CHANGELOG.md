@@ -1,9 +1,18 @@
 # Changelog
 
-## [v0.8.6](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.5...v0.8.6)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.0...HEAD)
+
+## [v0.9.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.6...v0.9.0) - 2020-11-06
+
+### Merged
+
+- Improved logic to find for headings in a document [`#9`](https://github.com/darkmavis1980/markdown-index-generator/pull/9)
+
+## [v0.8.6](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.5...v0.8.6) - 2020-11-04
 
 ### Commits
 
+- Updated dependencies for security fixes [`7698fff`](https://github.com/darkmavis1980/markdown-index-generator/commit/7698fff2813a039288a9eaf9073f51c4efd0df6b)
 - Fixed changelog [`27de701`](https://github.com/darkmavis1980/markdown-index-generator/commit/27de701bd233d78fa57538fb8b43063fa2a81f19)
 
 ## [v0.8.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.4...v0.8.5) - 2020-09-13
