@@ -111,9 +111,9 @@ export default class MarkdownParser {
   async parse() {
     try {
       const data = await fs.readFile(this.file)
-      const decoded = replaceBlock(data.toString('utf8'), '```')
+      const decoded = data.toString('utf8')
       this.fileCache = decoded
-      const markdown: string[] = decoded.split('\n')
+      const markdown: string[] = [...replaceBlock(decoded, '```').split('\n')]
       const links = this.getHeadings(markdown)
       this.links = this.parseHeadings(links)
       return this.links
