@@ -1,6 +1,18 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.0...HEAD)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.2...HEAD)
+
+## [v0.9.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.1...v0.9.2) - 2020-12-10
+
+### Merged
+
+- Fixed issue with missing cli-ux package [`#12`](https://github.com/darkmavis1980/markdown-index-generator/pull/12)
+
+## [v0.9.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.0...v0.9.1) - 2020-11-13
+
+### Merged
+
+- Fixed bug #10 [`#11`](https://github.com/darkmavis1980/markdown-index-generator/pull/11)
 
 ## [v0.9.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.8.6...v0.9.0) - 2020-11-06
 
