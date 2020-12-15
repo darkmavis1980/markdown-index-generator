@@ -17,7 +17,7 @@ $ npm install -g md-index-generator
 $ md-index-generator COMMAND
 running command...
 $ md-index-generator (-v|--version|version)
-md-index-generator/0.8.2 darwin-x64 node-v14.5.0
+md-index-generator/0.9.3 darwin-x64 node-v14.5.0
 
 // Display the output on the shell
 $ md-index-generator <MarkDown.md>
