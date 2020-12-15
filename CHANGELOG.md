@@ -1,9 +1,10 @@
 # Changelog
 
-## [v0.9.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.2...v0.9.3)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.2...HEAD)
 
 ### Commits
 
+- Fixed issue with special characters being included in the link [`bbc04e2`](https://github.com/darkmavis1980/markdown-index-generator/commit/bbc04e2f6dfa0590d43718eb846b5b8e23293c26)
 - Updated changelog [`b805a8d`](https://github.com/darkmavis1980/markdown-index-generator/commit/b805a8d12ca141ec0ad546275c2ce966c6b5961b)
 
 ## [v0.9.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.1...v0.9.2) - 2020-12-10
