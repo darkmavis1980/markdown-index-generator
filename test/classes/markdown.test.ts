@@ -52,6 +52,16 @@ describe('MarkdownParser (Class)', () => {
       expect(result[1]).to.equal('  - [Heading 2](#heading-2)')
     })
 
+    it('should properly sanitize the heading for special characters', () => {
+      const parser = new MarkdownParser(mockFile)
+      const mockHeadings = ['## Index', '## Heading 1 `@hello-/(world)!?`', '### Heading 2 `@hello-team/test-docs`', '## How to deploy the `@hello-team/test-docs` package to NPM']
+      const result = parser.parseHeadings(mockHeadings)
+      expect(result.length).to.equal(3)
+      expect(result[0]).to.equal('- [Heading 1 `@hello-/(world)!?`](#heading-1-hello-world)')
+      expect(result[1]).to.equal('  - [Heading 2 `@hello-team/test-docs`](#heading-2-hello-teamtest-docs)')
+      expect(result[2]).to.equal('- [How to deploy the `@hello-team/test-docs` package to NPM](#how-to-deploy-the-hello-teamtest-docs-package-to-npm)')
+    })
+
     it('should filter out the index heading if existing', () => {
       const parser = new MarkdownParser(mockFile)
       const mockHeadings = ['## Index', '## Heading 1', '### Heading 2']
@@ -79,7 +89,7 @@ describe('MarkdownParser (Class)', () => {
       expect(result[0]).to.equal('- [Heading 2](#heading-2)')
     })
 
-    xit('should fail if the file is not found', async () => {
+    it('should fail if the file is not found', async () => {
       const parser = new MarkdownParser('sometest.md')
       expect(await parser.parse().catch).to.not.be.undefined
     })
