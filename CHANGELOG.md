@@ -1,6 +1,13 @@
 # Changelog
 
-## [v0.9.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.4...v0.9.4)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.5...HEAD)
+
+## [v0.9.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.4...v0.9.5) - 2020-12-18
+
+### Commits
+
+- Added github action [`4526fd8`](https://github.com/darkmavis1980/markdown-index-generator/commit/4526fd8734636089372eaf23f075d2d3441eebfe)
+- Updated changelog [`8816bf9`](https://github.com/darkmavis1980/markdown-index-generator/commit/8816bf95ff8bba2e4fdeb44576e895880138d512)
 
 ## [v0.9.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.3...v0.9.4) - 2020-12-16
 
