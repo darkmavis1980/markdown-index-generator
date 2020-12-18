@@ -9,7 +9,7 @@ Parses a markdown document and creates an index based on headings.
 [![Version](https://img.shields.io/npm/v/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
 [![Downloads/week](https://img.shields.io/npm/dw/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
 [![License](https://img.shields.io/npm/l/md-index-generator.svg)](https://github.com/experimental/markdown-index-generator/blob/master/package.json)
-[![Build Status](https://travis-ci.org/darkmavis1980/markdown-index-generator.svg?branch=master)](https://travis-ci.org/darkmavis1980/markdown-index-generator)
+![Build Status](https://github.com/darkmavis1980/markdown-index-generator/workflows/CI/badge.svg)
 
 ## Usage
 ```sh-session
