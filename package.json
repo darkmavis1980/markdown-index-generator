@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -54,7 +54,8 @@
     "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:watch": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --watch --forbid-only \"test/**/*.test.ts\"",
     "changelog": "auto-changelog",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "eslint": "eslint . --ext .ts"
   },
   "types": "lib/index.d.ts",
   "auto-changelog": {

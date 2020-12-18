@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.9.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.4...v0.9.4)
+## [v0.9.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.4...v0.9.5)
+
+### Commits
+
+- Added github action [`4526fd8`](https://github.com/darkmavis1980/markdown-index-generator/commit/4526fd8734636089372eaf23f075d2d3441eebfe)
+- Added eslint npm script [`478d238`](https://github.com/darkmavis1980/markdown-index-generator/commit/478d238654424ae86f37f01bb23933e60fd1a72a)
+- Updated changelog [`8816bf9`](https://github.com/darkmavis1980/markdown-index-generator/commit/8816bf95ff8bba2e4fdeb44576e895880138d512)
 
 ## [v0.9.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.3...v0.9.4) - 2020-12-16
 
