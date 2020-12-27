@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -15,14 +15,15 @@
     "tslib": "^2.0.3"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@oclif/dev-cli": "^1.26.0",
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.2.0",
-    "@types/node": "^14.14.14",
+    "@types/node": "^14.14.16",
     "auto-changelog": "^2.2.1",
     "chai": "^4.2.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.16.0",
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.2.0",
     "mocha": "^8.2.1",
@@ -55,7 +56,8 @@
     "test:watch": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --watch --forbid-only \"test/**/*.test.ts\"",
     "changelog": "auto-changelog",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "eslint": "eslint . --ext .ts"
+    "eslint": "eslint . --ext .ts",
+    "coverage": "nyc --reporter=lcov npm run test"
   },
   "types": "lib/index.d.ts",
   "auto-changelog": {
