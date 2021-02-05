@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.7...v0.9.8)
+## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.8...v0.9.8)
+
+## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.7...v0.9.8) - 2021-02-05
+
+### Merged
+
+- Maintenance update [`#19`](https://github.com/darkmavis1980/markdown-index-generator/pull/19)
 
 ## [v0.9.7](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.6...v0.9.7) - 2021-01-04
 
