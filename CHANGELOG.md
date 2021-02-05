@@ -1,17 +1,39 @@
 # Changelog
 
-## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.5...HEAD)
+## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.7...v0.9.8)
+
+## [v0.9.7](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.6...v0.9.7) - 2021-01-04
+
+### Merged
+
+- Feature/add pr action [`#18`](https://github.com/darkmavis1980/markdown-index-generator/pull/18)
 
 ### Commits
 
-- Updated changelog [`e5b471b`](https://github.com/darkmavis1980/markdown-index-generator/commit/e5b471b058929d9f204efcdb65f421bd1c811c57)
+- Updated github actions to use npm ci [`a38051d`](https://github.com/darkmavis1980/markdown-index-generator/commit/a38051da623a5eeeaae381f9af0b4619b37c550d)
+- Updated text [`0ce5c08`](https://github.com/darkmavis1980/markdown-index-generator/commit/0ce5c08c5edf9e13348ba2cf4fef601945351b83)
+- Updated github action name [`94bfff2`](https://github.com/darkmavis1980/markdown-index-generator/commit/94bfff2855a945239c57b695bcb2eebd3fdee1bf)
+
+## [v0.9.6](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.5...v0.9.6) - 2020-12-27
+
+### Merged
+
+- Added coverage script and instanbul configuration [`#17`](https://github.com/darkmavis1980/markdown-index-generator/pull/17)
 
 ## [v0.9.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.4...v0.9.5) - 2020-12-18
+
+### Merged
+
+- Bugfix/remove travis ci [`#15`](https://github.com/darkmavis1980/markdown-index-generator/pull/15)
 
 ### Commits
 
 - Added github action [`4526fd8`](https://github.com/darkmavis1980/markdown-index-generator/commit/4526fd8734636089372eaf23f075d2d3441eebfe)
+- Added eslint npm script [`478d238`](https://github.com/darkmavis1980/markdown-index-generator/commit/478d238654424ae86f37f01bb23933e60fd1a72a)
 - Updated changelog [`8816bf9`](https://github.com/darkmavis1980/markdown-index-generator/commit/8816bf95ff8bba2e4fdeb44576e895880138d512)
+- Updated changelog [`e5b471b`](https://github.com/darkmavis1980/markdown-index-generator/commit/e5b471b058929d9f204efcdb65f421bd1c811c57)
+- Updated changelog [`5a20dfd`](https://github.com/darkmavis1980/markdown-index-generator/commit/5a20dfdb116d4d9e4b124611fb6940fa5992c006)
+- Replaced badge from travis-ci to github actions [`99408de`](https://github.com/darkmavis1980/markdown-index-generator/commit/99408de501d2f27f562b2d59b9f08cd65646f78a)
 
 ## [v0.9.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.3...v0.9.4) - 2020-12-16
 
