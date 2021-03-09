@@ -1,6 +1,11 @@
 # Changelog
 
-## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.8...v0.9.8)
+## [v10.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.8...HEAD)
+
+### Commits
+
+- Added logic to automatically add index tags if none present [`d358b40`](https://github.com/darkmavis1980/markdown-index-generator/commit/d358b4095a2af0a9ede43ff627dd3f3457d84eb2)
+- Updated changelog [`a2de1da`](https://github.com/darkmavis1980/markdown-index-generator/commit/a2de1da1e6b2dccb839beeb5a702e9837d88a325)
 
 ## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.7...v0.9.8) - 2021-02-05
 

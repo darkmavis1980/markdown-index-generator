@@ -1,7 +1,20 @@
 import {expect} from '@oclif/test'
-import {replaceTag, replaceBlock} from '../../src/lib/tags'
+import {replaceTag, replaceBlock, findFirstParagraph} from '../../src/lib/tags'
 
 describe('tags.ts', () => {
+  describe('findFirstParagraph (Function)', () => {
+    it('should add the index tag', () => {
+      const mockContent = `# Some title\n
+A paragraph\n
+## Subtitle\n
+Some text\n`
+
+      const result = findFirstParagraph(mockContent)
+      expect(result).to.contain('<!-- index-start -->')
+      expect(result).to.contain('<!-- index-end -->')
+    })
+  })
+
   describe('replacetag (Function)', () => {
     it('should replace the content', () => {
       const mockContent = `# Some Title

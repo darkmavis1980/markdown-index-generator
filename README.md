@@ -17,7 +17,7 @@ $ npm install -g md-index-generator
 $ md-index-generator COMMAND
 running command...
 $ md-index-generator (-v|--version|version)
-md-index-generator/0.9.3 darwin-x64 node-v14.5.0
+md-index-generator/0.10.0 darwin-x64 node-v14.15.3
 
 // Display the output on the shell
 $ md-index-generator <MarkDown.md>
@@ -61,3 +61,5 @@ The index will go here!
 
 Hello
 ```
+
+> If you don't add the index tags, the script will automatically put the index before the first Heading 2 in the document. It is recommended to add the tags to properly control where the index will be added.

@@ -1,3 +1,17 @@
+import {INDEX_TAG} from '../constants'
+
+/**
+ * Tries to the first H2 title and adds the index tag right before it
+ * @param {string} text The text to process
+ * @returns {string} The updated text
+ */
+export const findFirstParagraph = (text: string): string => {
+  const regex = /^(##\s.+)\n{1,3}/gm
+  const split = text.split(regex)
+  split.splice(1, 0, `<!-- ${INDEX_TAG}-start -->\n<!-- ${INDEX_TAG}-end -->\n\n`)
+  return split.join('')
+}
+
 /**
  * It replace the content of a given tag from a source string
  *
@@ -9,10 +23,16 @@
 export const replaceTag = (source: string, tag: string, content: string): string => {
   const start = `<!-- ${tag}-start -->`
   const end = `<!-- ${tag}-end -->`
-  const tagStartPosition = source.indexOf(start)
-  const tagEndPosition = source.indexOf(end)
+  let tagStartPosition = source.indexOf(start)
+  let tagEndPosition = source.indexOf(end)
   if (tagStartPosition === -1 || tagEndPosition === -1) {
-    throw new Error('You must add the index tags in the document!')
+    if (tag === INDEX_TAG) {
+      source = findFirstParagraph(source)
+      tagStartPosition = source.indexOf(start)
+      tagEndPosition = source.indexOf(end)
+    } else {
+      throw new Error(`You must add the ${tag} tags in the document!`)
+    }
   }
   const preTagContent = source.slice(0, tagStartPosition + start.length)
   const postTagContent = source.slice(tagEndPosition)
