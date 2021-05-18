@@ -20,7 +20,7 @@ class MarkdownIndexGenerator extends Command {
 
   static args = [{name: 'file', description: 'The input file to parse'}]
 
-  async run() {
+  async run(): Promise<undefined> {
     const {args, flags} = this.parse(MarkdownIndexGenerator)
     cli.action.start('Generating index')
     try {
