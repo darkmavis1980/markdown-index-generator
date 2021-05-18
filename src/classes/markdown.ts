@@ -108,7 +108,7 @@ export default class MarkdownParser {
    * @returns {string[]} The list of links
    * @throws An Error exception
    */
-  async parse() {
+  async parse(): Promise<string[]> {
     try {
       const data = await fs.readFile(this.file)
       const decoded = data.toString('utf8')
@@ -128,7 +128,7 @@ export default class MarkdownParser {
    * @throws An Error exception
    * @returns {Promise} The resolved await fs function
    */
-  async toFile(outputFile: string) {
+  async toFile(outputFile: string): Promise<void> {
     this.fileCache = ''
     const data = `${this.title}${this.links.join('\n')}`
     try {
@@ -143,7 +143,7 @@ export default class MarkdownParser {
    * @returns {string} The data written
    * @throws An Error exception
    */
-  async replaceOriginal() {
+  async replaceOriginal(): Promise<void> {
     try {
       const data = `${this.title}${this.links.join('\n')}`
       const fileData = replaceTag(this.fileCache, INDEX_TAG, data)
