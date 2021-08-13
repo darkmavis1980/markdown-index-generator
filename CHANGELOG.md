@@ -1,11 +1,51 @@
 # Changelog
 
-## [v10.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.8...HEAD)
+## [v0.10.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v10.0.0...v0.10.3)
+
+### Merged
+
+- Updated dependencies to fix vulnerabilities [`#23`](https://github.com/darkmavis1980/markdown-index-generator/pull/23)
+- Updated dependencies and fixed vulnerabilities [`#22`](https://github.com/darkmavis1980/markdown-index-generator/pull/22)
+- Added logic to automatically add index tags if none present [`#20`](https://github.com/darkmavis1980/markdown-index-generator/pull/20)
+
+### Commits
+
+- Updated dependencies [`b58ae79`](https://github.com/darkmavis1980/markdown-index-generator/commit/b58ae79b59771e7e0e62a938272fe34688617d81)
+- Added missing dev dependency [`2ec7144`](https://github.com/darkmavis1980/markdown-index-generator/commit/2ec714424995d78741d9a3442db51ad005a08dd1)
+- Updated lock file [`be87757`](https://github.com/darkmavis1980/markdown-index-generator/commit/be877570494a58d7238de05177a0246d5b327b83)
+- Added @typescript-eslint/parser [`6d2ce79`](https://github.com/darkmavis1980/markdown-index-generator/commit/6d2ce79ccef546b81b836b5cac4e4fd38cf3aa2b)
+
+## [v10.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.2...v10.0.0) - 2021-03-09
+
+## [v0.10.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.1...v0.10.2) - 2021-05-18
+
+### Merged
+
+- Updated dependencies to fix vulnerabilities [`#23`](https://github.com/darkmavis1980/markdown-index-generator/pull/23)
+
+### Commits
+
+- Added missing dev dependency [`2ec7144`](https://github.com/darkmavis1980/markdown-index-generator/commit/2ec714424995d78741d9a3442db51ad005a08dd1)
+- Added @typescript-eslint/parser [`6d2ce79`](https://github.com/darkmavis1980/markdown-index-generator/commit/6d2ce79ccef546b81b836b5cac4e4fd38cf3aa2b)
+
+## [v0.10.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.0...v0.10.1) - 2021-04-03
+
+### Merged
+
+- Updated dependencies and fixed vulnerabilities [`#22`](https://github.com/darkmavis1980/markdown-index-generator/pull/22)
+- Added logic to automatically add index tags if none present [`#20`](https://github.com/darkmavis1980/markdown-index-generator/pull/20)
+
+### Commits
+
+- Updated lock file [`be87757`](https://github.com/darkmavis1980/markdown-index-generator/commit/be877570494a58d7238de05177a0246d5b327b83)
+
+## [v0.10.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.8...v0.10.0) - 2021-03-09
 
 ### Commits
 
 - Added logic to automatically add index tags if none present [`d358b40`](https://github.com/darkmavis1980/markdown-index-generator/commit/d358b4095a2af0a9ede43ff627dd3f3457d84eb2)
 - Updated changelog [`a2de1da`](https://github.com/darkmavis1980/markdown-index-generator/commit/a2de1da1e6b2dccb839beeb5a702e9837d88a325)
+- Updated changelog [`8677c9d`](https://github.com/darkmavis1980/markdown-index-generator/commit/8677c9db9caa490d2c7c1f7dcf25ea125e361a06)
 
 ## [v0.9.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.9.7...v0.9.8) - 2021-02-05
 
