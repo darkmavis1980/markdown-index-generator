@@ -117,7 +117,7 @@ export default class MarkdownParser {
       const links = this.getHeadings(markdown)
       this.links = this.parseHeadings(links)
       return this.links
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error.message)
     }
   }
@@ -133,7 +133,7 @@ export default class MarkdownParser {
     const data = `${this.title}${this.links.join('\n')}`
     try {
       await fs.writeFile(outputFile, data)
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error.message)
     }
   }
@@ -149,7 +149,7 @@ export default class MarkdownParser {
       const fileData = replaceTag(this.fileCache, INDEX_TAG, data)
       await fs.writeFile(this.file, fileData)
       this.fileCache = ''
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error.message)
     }
   }

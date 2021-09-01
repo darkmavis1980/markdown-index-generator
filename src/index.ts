@@ -46,7 +46,7 @@ class MarkdownIndexGenerator extends Command {
         this.log(parser.toView())
         this.log('--- End Markdown ---')
       }
-    } catch (error) {
+    } catch (error: any) {
       this.error(error.message)
     }
     cli.action.stop()
