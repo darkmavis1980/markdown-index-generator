@@ -10,7 +10,7 @@
   "dependencies": {
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
-    "@oclif/plugin-help": "^3.2.3",
+    "@oclif/plugin-help": "^3.3.0",
     "cli-ux": "^5.6.3",
     "tslib": "^2.3.1"
   },
