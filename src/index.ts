@@ -53,4 +53,4 @@ class MarkdownIndexGenerator extends Command {
   }
 }
 
-export = MarkdownIndexGenerator
+export default MarkdownIndexGenerator
