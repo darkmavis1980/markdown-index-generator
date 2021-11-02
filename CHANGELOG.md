@@ -1,23 +1,28 @@
 # Changelog
 
-## [v0.10.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v10.0.0...v0.10.4)
+## [Unreleased](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.0...HEAD)
+
+## [v1.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.4...v1.0.0) - 2021-11-02
+
+### Merged
+
+- Bugfix/fix ts 4 compatibility [`#27`](https://github.com/darkmavis1980/markdown-index-generator/pull/27)
+
+### Commits
+
+- Converted module to use both ESM and CommonJS [`9ffa55b`](https://github.com/darkmavis1980/markdown-index-generator/commit/9ffa55b52f0fc65bf212fe4dc784ffb1fb56311d)
+- Updated configuration to generate commonJS and ESM modules [`f149882`](https://github.com/darkmavis1980/markdown-index-generator/commit/f149882894ac879f6e93eab288f86a68c0382739)
+- BREAKING CHANGE: this version uses both ESM and CommonJS [`202690d`](https://github.com/darkmavis1980/markdown-index-generator/commit/202690d3e39fea490d89fdcfeb0fe8e2c3bf8101)
+
+## [v0.10.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.3...v0.10.4) - 2021-09-01
 
 ### Merged
 
 - Bugfix/fix audit issues [`#26`](https://github.com/darkmavis1980/markdown-index-generator/pull/26)
-- Updated dependencies to fix vulnerabilities [`#23`](https://github.com/darkmavis1980/markdown-index-generator/pull/23)
-- Updated dependencies and fixed vulnerabilities [`#22`](https://github.com/darkmavis1980/markdown-index-generator/pull/22)
-- Added logic to automatically add index tags if none present [`#20`](https://github.com/darkmavis1980/markdown-index-generator/pull/20)
 
 ### Commits
 
 - Fixed issue with tsc [`a39f18d`](https://github.com/darkmavis1980/markdown-index-generator/commit/a39f18db9e1f25a8b0650fe61ffb6655dbd4d17a)
-- Updated dependencies [`b58ae79`](https://github.com/darkmavis1980/markdown-index-generator/commit/b58ae79b59771e7e0e62a938272fe34688617d81)
-- Added missing dev dependency [`2ec7144`](https://github.com/darkmavis1980/markdown-index-generator/commit/2ec714424995d78741d9a3442db51ad005a08dd1)
-- Updated lock file [`be87757`](https://github.com/darkmavis1980/markdown-index-generator/commit/be877570494a58d7238de05177a0246d5b327b83)
-- Added @typescript-eslint/parser [`6d2ce79`](https://github.com/darkmavis1980/markdown-index-generator/commit/6d2ce79ccef546b81b836b5cac4e4fd38cf3aa2b)
-
-## [v10.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.3...v10.0.0) - 2021-03-09
 
 ## [v0.10.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.2...v0.10.3) - 2021-08-13
 
