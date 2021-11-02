@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
     "declaration": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "rootDir": "src",
     "strict": true,
+    "listFiles": false,
+    "lib": ["esnext"],
+    "pretty": true,
+    "resolveJsonModule": true,
+    "types": ["node"],
   },
   "include": [
     "src/**/*",
   ],
   "exclude": [
-    "node_modules",
+    "node_modules", "dist",
   ]
 }
