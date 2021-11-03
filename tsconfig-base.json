@@ -1,22 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "declaration": true,
     "moduleResolution": "node",
+    "declaration": true,
     "importHelpers": true,
+    "module": "es2020",
     "rootDir": "src",
     "strict": true,
-    "listFiles": false,
-    "lib": ["esnext"],
-    "pretty": true,
-    "resolveJsonModule": true,
-    "types": ["node"],
+    "target": "es2017"
   },
   "include": [
     "src/**/*",
   ],
   "exclude": [
-    "node_modules", "dist",
+    "node_modules",
   ]
 }
