@@ -1,12 +1,8 @@
 # Changelog
 
-## [v0.10.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.0...v0.10.5)
+## [v0.10.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.5...v0.10.5)
 
-### Commits
-
-- Updated dependencies [`c2f34c5`](https://github.com/darkmavis1980/markdown-index-generator/commit/c2f34c597ecc077a1b411cfd54a1ac22935aa82a)
-
-## [v1.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.4...v1.0.0) - 2021-11-02
+## [v0.10.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.4...v0.10.5) - 2022-01-07
 
 ### Merged
 
@@ -14,9 +10,7 @@
 
 ### Commits
 
-- Converted module to use both ESM and CommonJS [`9ffa55b`](https://github.com/darkmavis1980/markdown-index-generator/commit/9ffa55b52f0fc65bf212fe4dc784ffb1fb56311d)
-- Updated configuration to generate commonJS and ESM modules [`f149882`](https://github.com/darkmavis1980/markdown-index-generator/commit/f149882894ac879f6e93eab288f86a68c0382739)
-- BREAKING CHANGE: this version uses both ESM and CommonJS [`202690d`](https://github.com/darkmavis1980/markdown-index-generator/commit/202690d3e39fea490d89fdcfeb0fe8e2c3bf8101)
+- Updated dependencies [`c2f34c5`](https://github.com/darkmavis1980/markdown-index-generator/commit/c2f34c597ecc077a1b411cfd54a1ac22935aa82a)
 
 ## [v0.10.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.3...v0.10.4) - 2021-09-01
 
