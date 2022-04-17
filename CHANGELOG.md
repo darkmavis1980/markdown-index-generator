@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.10.7](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.6...v0.10.7)
+## [v0.10.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.7...v0.10.8)
+
+### Commits
+
+- Fixed workflows [`995b901`](https://github.com/darkmavis1980/markdown-index-generator/commit/995b9016f3a315ffd9b735df54225dd543e93e76)
+
+## [v0.10.7](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.6...v0.10.7) - 2022-04-17
 
 ### Merged
 
