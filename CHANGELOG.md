@@ -1,6 +1,16 @@
 # Changelog
 
-## [v0.10.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.5...v0.10.5)
+## [v0.10.6](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.5...v0.10.6)
+
+### Merged
+
+- Bump minimist from 1.2.5 to 1.2.6 [`#34`](https://github.com/darkmavis1980/markdown-index-generator/pull/34)
+- Bugfix/update dependencies 2022 [`#33`](https://github.com/darkmavis1980/markdown-index-generator/pull/33)
+
+### Commits
+
+- Updated dependencies [`8d81120`](https://github.com/darkmavis1980/markdown-index-generator/commit/8d811202b9ac4df5ec7d7d8559b84a45f3171b43)
+- Updated changelog [`65e5313`](https://github.com/darkmavis1980/markdown-index-generator/commit/65e5313b38939eb916003424ed066517b94fe56c)
 
 ## [v0.10.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.4...v0.10.5) - 2022-01-07
 
