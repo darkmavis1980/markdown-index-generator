@@ -45,6 +45,8 @@ $ md-index-generator <MarkDown.md> --replace
 
 `-r, --replace` This flag will set to add the index in the source file
 
+`-c, --collaspable <OPEN>` This will wrap the index into a collapsable container, you can pass a boolean value (`true` or `1`) to define if the content is open by or not, default value is `false`.
+
 #### Add the index in the source file
 
 If you wish to modify the file you are passing as a source, you must add the tags `<!-- index-start -->` and `<!-- index-end -->` in the markdown document.

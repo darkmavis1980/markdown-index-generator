@@ -23,9 +23,19 @@ export default class MarkdownParser {
   public depth = 4
 
   /**
+   * Set collapsable value, if true it will add the html to enable collapsable content
+   */
+  public collapsable = false;
+
+  /**
+   * If true the collapsable will be extended, if not it will be collapsed
+   */
+  public collapsableOpen = false;
+
+  /**
    * Default title of the index
    */
-  private title = '## Index\n\n'
+  private title = '## Table of Contents\n\n'
 
   constructor(file: string) {
     if (!isFileValid(file)) {
@@ -90,6 +100,7 @@ export default class MarkdownParser {
    */
   parseHeadings(links: string[]): string[] {
     return links.map(heading => {
+      console.log(heading)
       const textHeading: string = heading.replace(/#{2,5}\s/, '')
       if (textHeading.toLocaleLowerCase() === 'index') {
         return ''
@@ -122,6 +133,24 @@ export default class MarkdownParser {
     }
   }
 
+  getCollapsableHtml(list: string): string {
+    return `<details${this.collapsableOpen === true ? ' open="open"' : ''}>\n<summary>${this.title}</summary>\n${list}</details>`
+  }
+
+  wrapContent(): string {
+    const list = this.links.join('\n')
+    return this.collapsable ? this.getCollapsableHtml(list) : `${this.title}${this.links.join('\n')}`
+  }
+
+  setCollapsable(): void {
+    this.collapsable = true
+  }
+
+  setCollapsableOpen(collapsableOpen: string): void {
+    this.collapsableOpen = collapsableOpen === 'true'
+    console.log('this.collapsableOpen', this.collapsableOpen)
+  }
+
   /**
    * Save the ouput of the links in a file
    * @param {string} outputFile The filename where to store the output
@@ -130,7 +159,7 @@ export default class MarkdownParser {
    */
   async toFile(outputFile: string): Promise<void> {
     this.fileCache = ''
-    const data = `${this.title}${this.links.join('\n')}`
+    const data = this.wrapContent()
     try {
       await fs.writeFile(outputFile, data)
     } catch (error: any) {
@@ -145,7 +174,7 @@ export default class MarkdownParser {
    */
   async replaceOriginal(): Promise<void> {
     try {
-      const data = `${this.title}${this.links.join('\n')}`
+      const data = this.wrapContent()
       const fileData = replaceTag(this.fileCache, INDEX_TAG, data)
       await fs.writeFile(this.file, fileData)
       this.fileCache = ''
@@ -160,6 +189,6 @@ export default class MarkdownParser {
    */
   toView(): string {
     this.fileCache = ''
-    return `${this.title}${this.links.join('\n')}`
+    return this.wrapContent()
   }
 }

@@ -14,7 +14,8 @@ class MarkdownIndexGenerator extends Command {
     // flag with a value (-d, --depth=VALUE)
     depth: flags.integer({char: 'd', description: 'Depth of the headings to parse, 4 means \'till h4\'', default: 4}),
     // flag with a value (-t, --title=VALUE)
-    title: flags.string({char: 't', description: 'Title to add on top of the index, by default is \'## Index\''}),
+    title: flags.string({char: 't', description: 'Title to add on top of the index, by default is \'## Table of Contents\''}),
+    collapsable: flags.string({char: 'c', description: 'Wrap the index in a collapsable element'}),
     replace: flags.boolean({char: 'r', description: 'Add the index to the source file', default: false}),
   }
 
@@ -34,6 +35,12 @@ class MarkdownIndexGenerator extends Command {
       if (flags.title) {
         parser.setTitle(flags.title)
       }
+
+      if (flags.collapsable) {
+        parser.setCollapsable()
+        parser.setCollapsableOpen(flags.collapsable)
+      }
+
       await parser.parse()
       if (flags.output) {
         await parser.toFile(flags.output)
