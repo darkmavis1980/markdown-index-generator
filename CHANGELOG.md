@@ -1,6 +1,18 @@
 # Changelog
 
-## [v0.11.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.8...v0.11.0)
+## [v0.11.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.0...v0.11.1)
+
+### Merged
+
+- Feature/update workflows [`#40`](https://github.com/darkmavis1980/markdown-index-generator/pull/40)
+
+### Commits
+
+- Updated version [`fc812d8`](https://github.com/darkmavis1980/markdown-index-generator/commit/fc812d8883174c72c74b69b0458594cc2eadcf76)
+- Updated workflow to use node between 14 and 18 [`098d381`](https://github.com/darkmavis1980/markdown-index-generator/commit/098d3819eca3f562494dba40ac79f42dec90ddb4)
+- Updated run [`0354b10`](https://github.com/darkmavis1980/markdown-index-generator/commit/0354b10cf184e2aca77232a265d7a846ece0f97d)
+
+## [v0.11.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.8...v0.11.0) - 2022-06-03
 
 ### Commits
 
