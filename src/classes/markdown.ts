@@ -31,6 +31,7 @@ export default class MarkdownParser {
     if (!isFileValid(file)) {
       throw new Error('File is not valid')
     }
+
     this.file = file
     this.fileCache = ''
     this.links = []
@@ -54,6 +55,7 @@ export default class MarkdownParser {
     if (depth < 2 || depth > 5) {
       throw new Error('Depth value not valid')
     }
+
     this.depth = depth
   }
 
@@ -80,6 +82,7 @@ export default class MarkdownParser {
     if (match) {
       return match[1]
     }
+
     return '- '
   }
 
@@ -94,6 +97,7 @@ export default class MarkdownParser {
       if (textHeading.toLocaleLowerCase() === 'index') {
         return ''
       }
+
       const hashes = (heading.match(/#/g) || []).length
       const indents = hashes <= 2 ? 0 : hashes - 2
       const listStyle = this.getListStyle(textHeading)

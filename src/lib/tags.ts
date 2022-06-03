@@ -34,6 +34,7 @@ export const replaceTag = (source: string, tag: string, content: string): string
       throw new Error(`You must add the ${tag} tags in the document!`)
     }
   }
+
   const preTagContent = source.slice(0, tagStartPosition + start.length)
   const postTagContent = source.slice(tagEndPosition)
   return `${preTagContent}\n${content}\n${postTagContent}\n`

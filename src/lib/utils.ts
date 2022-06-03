@@ -10,8 +10,8 @@ export function stringToPermalink(string: string): string {
   }
 
   return string
-  .replace(/([-])+\1{1,}/g, '')
+  .replace(/(-)+\1+/g, '')
   .replace(/\s/g, '-')
-  .replace(/[^a-zA-Z0-9-]/g, '')
+  .replace(/[^\dA-Za-z-]/g, '')
   .toLowerCase()
 }

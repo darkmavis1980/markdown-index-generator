@@ -17,20 +17,20 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node: [ 12, 14, 16 ]
     # Steps represent a sequence of tasks that will be executed as part of the job
+    name: Build for Node ${{ matrix.node }} version
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
       - name: Run unit tests
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm test
       - run: npm run eslint
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}

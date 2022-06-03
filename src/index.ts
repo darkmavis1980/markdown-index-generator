@@ -27,14 +27,19 @@ class MarkdownIndexGenerator extends Command {
       if (!args.file) {
         return this.error('Missing file to parse')
       }
+
       const parser = new MarkDownParser(args.file)
+
       if (flags.depth) {
         parser.setDepth(flags.depth)
       }
+
       if (flags.title) {
         parser.setTitle(flags.title)
       }
+
       await parser.parse()
+
       if (flags.output) {
         await parser.toFile(flags.output)
         this.log(`File ${flags.output} saved!`)
@@ -49,6 +54,7 @@ class MarkdownIndexGenerator extends Command {
     } catch (error: any) {
       this.error(error.message)
     }
+
     cli.action.stop()
   }
 }
