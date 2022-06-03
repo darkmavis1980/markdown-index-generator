@@ -1,6 +1,14 @@
 # Changelog
 
-## [v0.10.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.7...v0.10.8)
+## [v0.11.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.8...v0.11.0)
+
+### Commits
+
+- Updated eslint dependencies [`a82dd0b`](https://github.com/darkmavis1980/markdown-index-generator/commit/a82dd0b5111abd4c4fb5b6182c912d6ed806af7e)
+- Updated dependencies [`2d4264e`](https://github.com/darkmavis1980/markdown-index-generator/commit/2d4264e5901ea8963748d06c80332d747c4decbf)
+- Updated workflows [`9e74548`](https://github.com/darkmavis1980/markdown-index-generator/commit/9e745485e4df580f2466da869807962408be5362)
+
+## [v0.10.8](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.10.7...v0.10.8) - 2022-04-17
 
 ### Commits
 
