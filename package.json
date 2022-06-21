@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
