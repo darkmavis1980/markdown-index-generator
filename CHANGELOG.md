@@ -1,6 +1,16 @@
 # Changelog
 
-## [v0.11.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.0...v0.11.1)
+## [v0.11.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.1...v0.11.2)
+
+### Merged
+
+- Updated workflow to use node between 14 and 18 [`#41`](https://github.com/darkmavis1980/markdown-index-generator/pull/41)
+
+### Commits
+
+- Fixed issue with trailing new line [`5468707`](https://github.com/darkmavis1980/markdown-index-generator/commit/5468707cb8db7723d98a2d2e4c39b8fe3d6e3190)
+
+## [v0.11.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.0...v0.11.1) - 2022-06-04
 
 ### Merged
 
