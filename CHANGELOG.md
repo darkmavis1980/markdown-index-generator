@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.12.0-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.0...v0.12.0-next.1)
+## [v0.12.0-next.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.1...v0.12.0-next.2)
+
+### Commits
+
+- Removed mocha in favour of Jest [`3d72079`](https://github.com/darkmavis1980/markdown-index-generator/commit/3d72079650aa7037bc3df8a5ac9d8d5b842005ee)
+
+## [v0.12.0-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.0...v0.12.0-next.1) - 2022-12-02
 
 ### Commits
 
