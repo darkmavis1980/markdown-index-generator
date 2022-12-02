@@ -1,6 +1,8 @@
 # Changelog
 
-## [v0.12.0-next.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.2...v0.12.0-next.3)
+## [v0.12.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.3...v0.12.0)
+
+## [v0.12.0-next.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.2...v0.12.0-next.3) - 2022-12-02
 
 ### Commits
 
