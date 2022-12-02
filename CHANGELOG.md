@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.12.0-next.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.1...v0.12.0-next.2)
+## [v0.12.0-next.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.2...v0.12.0-next.3)
+
+### Commits
+
+- Fixed eslint [`d60de09`](https://github.com/darkmavis1980/markdown-index-generator/commit/d60de09873e2c98060951fd291a667a3dc47b801)
+
+## [v0.12.0-next.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.1...v0.12.0-next.2) - 2022-12-02
 
 ### Commits
 
