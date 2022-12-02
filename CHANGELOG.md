@@ -1,6 +1,36 @@
 # Changelog
 
-## [v0.11.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.2...v0.11.3)
+## [v0.12.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.3...v0.12.0)
+
+## [v0.12.0-next.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.2...v0.12.0-next.3) - 2022-12-02
+
+### Commits
+
+- Fixed eslint [`d60de09`](https://github.com/darkmavis1980/markdown-index-generator/commit/d60de09873e2c98060951fd291a667a3dc47b801)
+
+## [v0.12.0-next.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.1...v0.12.0-next.2) - 2022-12-02
+
+### Commits
+
+- Removed mocha in favour of Jest [`3d72079`](https://github.com/darkmavis1980/markdown-index-generator/commit/3d72079650aa7037bc3df8a5ac9d8d5b842005ee)
+
+## [v0.12.0-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.0...v0.12.0-next.1) - 2022-12-02
+
+### Commits
+
+- Used commonjs for main command [`2aa2ee1`](https://github.com/darkmavis1980/markdown-index-generator/commit/2aa2ee11c912dcf8d8ab4f277600afeb4c716c45)
+
+## [v0.12.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.3...v0.12.0-next.0) - 2022-12-02
+
+### Merged
+
+- Bugfix/maintenance update [`#43`](https://github.com/darkmavis1980/markdown-index-generator/pull/43)
+
+### Commits
+
+- Removed oclif [`6116fb4`](https://github.com/darkmavis1980/markdown-index-generator/commit/6116fb4cf90c1cf37b99c89974771e6a3e079ab4)
+
+## [v0.11.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.2...v0.11.3) - 2022-09-21
 
 ### Merged
 

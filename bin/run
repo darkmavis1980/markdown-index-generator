@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const project = path.join(__dirname, '../tsconfig.json')
-const dev = fs.existsSync(project)
+const { program } = require('commander');
+const { version } = require('../package.json');
+const MarkdownIndexGenerator = require('../lib/index.js');
 
-if (dev) {
-  require('ts-node').register({project})
-}
+program
+  .version(version)
+  .arguments('<file>', 'The file to parse')
+  .option('-o', '--output <outputFile>', 'Output will be saved in the defined file')
+  .option('-d', '--depth <depth>', 'Depth of the headings to parse, 4 means \'till h4\'', 4)
+  .option('-t', '--title <title>', 'Title to add on top of the index, by default is \'## Index\'')
+  .option('-r', '--replace', 'Add the index to the source file', false)
+  .action(MarkdownIndexGenerator);
 
-require(`../${dev ? 'src' : 'lib'}`).run()
-.catch(require('@oclif/errors/handle'))
+program.parse();

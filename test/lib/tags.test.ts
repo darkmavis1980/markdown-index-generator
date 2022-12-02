@@ -1,4 +1,3 @@
-import {expect} from '@oclif/test'
 import {replaceTag, replaceBlock, findFirstParagraph} from '../../src/lib/tags'
 
 describe('tags.ts', () => {
@@ -7,11 +6,11 @@ describe('tags.ts', () => {
       const mockContent = `# Some title\n
 A paragraph\n
 ## Subtitle\n
-Some text\n`
+Some text\n`;
 
       const result = findFirstParagraph(mockContent)
-      expect(result).to.contain('<!-- index-start -->')
-      expect(result).to.contain('<!-- index-end -->')
+      expect(result).toContain('<!-- index-start -->');
+      expect(result).toContain('<!-- index-end -->');
     })
   })
 
@@ -20,22 +19,22 @@ Some text\n`
       const mockContent = `# Some Title
       <!-- test-start -->
       <!-- test-end -->
-      Some test`
-      const result = replaceTag(mockContent, 'test', 'hello')
-      expect(result).to.contain('hello')
+      Some test`;
+      const result = replaceTag(mockContent, 'test', 'hello');
+      expect(result).toContain('hello');
     })
 
     it('should throw an error if a tag is missing', () => {
       const mockContent = `# Some Title
       <!-- test-start -->
-      Some test`
+      Some test`;
 
-      expect(() => replaceTag(mockContent, 'test', 'hello')).to.throw()
+      expect(() => replaceTag(mockContent, 'test', 'hello')).toThrow()
 
       const mockContent2 = `# Some Title
-      Some test`
+      Some test`;
 
-      expect(() => replaceTag(mockContent2, 'test', 'hello')).to.throw()
+      expect(() => replaceTag(mockContent2, 'test', 'hello')).toThrow();
     })
   })
 
@@ -45,9 +44,9 @@ Some text\n`
       \`\`\`
       Find Me
       \`\`\`
-      Some test`
-      const result = replaceBlock(mockContent, '```')
-      expect(result).to.not.contain('Find Me')
+      Some test`;
+      const result = replaceBlock(mockContent, '```');
+      expect(result).not.toContain('Find Me');
     })
 
     it('should not remove everything else', () => {
@@ -55,9 +54,9 @@ Some text\n`
       \`\`\`
       Find Me
       \`\`\`
-      Some test`
-      const result = replaceBlock(mockContent, '```')
-      expect(result).to.contain('Some test')
+      Some test`;
+      const result = replaceBlock(mockContent, '```');
+      expect(result).toContain('Some test');
     })
 
     it('should remove every instance of the block from the content', () => {
@@ -69,9 +68,9 @@ Some text\n`
       \`\`\`
       Find Me
       \`\`\`
-      Some test`
-      const result = replaceBlock(mockContent, '```')
-      expect(result).to.not.contain('Find Me')
+      Some test`;
+      const result = replaceBlock(mockContent, '```');
+      expect(result).not.toContain('Find Me');
     })
   })
 })
