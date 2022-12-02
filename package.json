@@ -4,7 +4,7 @@
   "version": "0.12.0-next.0",
   "author": "Alessio Michelini",
   "bin": {
-    "md-index-generator": "./bin/ru.mjs"
+    "md-index-generator": "./bin/run"
   },
   "bugs": "https://github.com/experimental/markdown-index-generator/issues",
   "dependencies": {
@@ -35,13 +35,15 @@
   ],
   "homepage": "https://github.com/darkmavis1980/markdown-index-generator",
   "keywords": [
-    "oclif"
+    "markdown",
+    "index"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
+    "build": "tsc -b",
     "prepack": "rm -rf lib && tsc -b",
     "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:watch": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --watch --forbid-only \"test/**/*.test.ts\"",

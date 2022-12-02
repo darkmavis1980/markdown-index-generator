@@ -2,6 +2,8 @@
   "compilerOptions": {
     "declaration": true,
     "importHelpers": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "module": "commonjs",
     "outDir": "lib",
     "rootDir": "src",
