@@ -4,38 +4,30 @@
   "version": "0.11.3",
   "author": "Alessio Michelini",
   "bin": {
-    "md-index-generator": "./bin/run"
+    "md-index-generator": "./bin/ru.mjs"
   },
   "bugs": "https://github.com/experimental/markdown-index-generator/issues",
   "dependencies": {
-    "@oclif/command": "^1.8.16",
-    "@oclif/config": "^1.18.3",
-    "@oclif/plugin-help": "^5.1.12",
-    "cli-ux": "^6.0.9",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@oclif/dev-cli": "^1.26.10",
-    "@oclif/test": "^2.1.1",
-    "@types/chai": "^4.3.3",
+    "@types/chai": "^4.3.4",
     "@types/mocha": "^9.1.1",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
     "auto-changelog": "^2.4.0",
-    "chai": "^4.3.6",
-    "eslint": "^8.23.1",
-    "eslint-config-oclif": "^4.0.0",
-    "eslint-config-oclif-typescript": "^1.0.2",
+    "chai": "^4.3.7",
+    "eslint": "^8.28.0",
     "eslint-plugin-unicorn": "^43.0.2",
-    "mocha": "^10.0.0",
+    "mocha": "^10.1.0",
     "nyc": "^15.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.8.3"
+    "typescript": "^4.9.3"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=16.0.0"
   },
   "files": [
     "/bin",
@@ -47,14 +39,10 @@
   ],
   "license": "MIT",
   "main": "lib/index.js",
-  "oclif": {
-    "bin": "md-index-generator"
-  },
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rm -rf lib && tsc -b",
     "test": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "test:watch": "./node_modules/nyc/bin/nyc.js --extension .ts mocha --watch --forbid-only \"test/**/*.test.ts\"",
     "changelog": "auto-changelog",

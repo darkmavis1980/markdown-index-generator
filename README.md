@@ -5,13 +5,13 @@ Parses a markdown document and creates an index based on headings.
 
 > The h1 heading will be ignored as it should be used only for the main title of the document
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
 [![Downloads/week](https://img.shields.io/npm/dw/md-index-generator.svg)](https://npmjs.org/package/md-index-generator)
 [![License](https://img.shields.io/npm/l/md-index-generator.svg)](https://github.com/experimental/markdown-index-generator/blob/master/package.json)
 ![Build Status](https://github.com/darkmavis1980/markdown-index-generator/workflows/CI/badge.svg)
 
 ## Usage
+
 ```sh-session
 $ npm install -g md-index-generator
 $ md-index-generator COMMAND
@@ -50,7 +50,7 @@ $ md-index-generator <MarkDown.md> --replace
 If you wish to modify the file you are passing as a source, you must add the tags `<!-- index-start -->` and `<!-- index-end -->` in the markdown document.
 Here a sample:
 
-```
+```markdown
 # Your Fancy document
 
 <!-- index-start -->
