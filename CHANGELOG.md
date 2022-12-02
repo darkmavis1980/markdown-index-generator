@@ -1,6 +1,16 @@
 # Changelog
 
-## [v0.11.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.2...v0.11.3)
+## [v0.12.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.3...v0.12.0-next.0)
+
+### Merged
+
+- Bugfix/maintenance update [`#43`](https://github.com/darkmavis1980/markdown-index-generator/pull/43)
+
+### Commits
+
+- Removed oclif [`6116fb4`](https://github.com/darkmavis1980/markdown-index-generator/commit/6116fb4cf90c1cf37b99c89974771e6a3e079ab4)
+
+## [v0.11.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.2...v0.11.3) - 2022-09-21
 
 ### Merged
 
