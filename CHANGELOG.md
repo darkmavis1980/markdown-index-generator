@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.12.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.3...v0.12.0-next.0)
+## [v0.12.0-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.0...v0.12.0-next.1)
+
+### Commits
+
+- Used commonjs for main command [`2aa2ee1`](https://github.com/darkmavis1980/markdown-index-generator/commit/2aa2ee11c912dcf8d8ab4f277600afeb4c716c45)
+
+## [v0.12.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.11.3...v0.12.0-next.0) - 2022-12-02
 
 ### Merged
 
