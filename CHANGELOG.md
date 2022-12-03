@@ -1,13 +1,17 @@
 # Changelog
 
-## [v0.12.1-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.13.0-next.0...v0.12.1-next.1)
+## [v0.12.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1-next.1...v0.12.1)
+
+### Commits
+
+- Fixed typo [`b9e1c61`](https://github.com/darkmavis1980/markdown-index-generator/commit/b9e1c61d95563fa5294328d604fa5e8fe4ec3010)
+
+## [v0.12.1-next.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1-next.0...v0.12.1-next.1) - 2022-12-03
 
 ### Commits
 
 - Fixed issue with flags [`832c08c`](https://github.com/darkmavis1980/markdown-index-generator/commit/832c08cbccc5b0dded87eabd5222c7a229052764)
 - Removed file added by accident [`d4ffab5`](https://github.com/darkmavis1980/markdown-index-generator/commit/d4ffab5b5562ba1bee66abb100cce61c37128b9e)
-
-## [v0.13.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1-next.0...v0.13.0-next.0) - 2022-12-03
 
 ## [v0.12.1-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0...v0.12.1-next.0) - 2022-12-03
 
