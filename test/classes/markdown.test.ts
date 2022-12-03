@@ -88,7 +88,7 @@ describe('MarkdownParser (Class)', () => {
       expect(result[0]).toEqual('- [Heading 2](#heading-2)');
     })
 
-    xit('should fail if the file is not found', async () => {
+    it('should fail if the file is not found', async () => {
       const parser = new MarkdownParser('sometest.md');
       expect(
         await parser.parse().catch
