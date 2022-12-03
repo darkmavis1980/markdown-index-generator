@@ -1,33 +1,32 @@
-import MarkDownParser from './classes/markdown'
+import MarkDownParser from './classes/markdown';
+import { Flags } from './interfaces/types';
+import { DEFAULT_VALUES } from './constants';
 
-interface Flags {
-  depth?: number;
-  title?: string;
-  output?: string;
-  replace?: string;
-}
+const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
+  if (!flags) {
+    flags = {...DEFAULT_VALUES};
+  }
 
-const MarkdownIndexGenerator = async(file: string, flags: Flags) => {
   if (!file) {
     throw 'Missing file to parse';
   }
 
   const parser = new MarkDownParser(file);
 
-  if (flags.depth) {
+  if (flags?.depth) {
     parser.setDepth(flags.depth);
   }
 
-  if (flags.title) {
+  if (flags?.title) {
     parser.setTitle(flags.title);
   }
 
   await parser.parse();
 
-  if (flags.output) {
+  if (flags?.output) {
     await parser.toFile(flags.output);
     console.log(`File ${flags.output} saved!`);
-  } else if (flags.replace) {
+  } else if (flags?.replace) {
     await parser.replaceOriginal();
     console.log(`File ${file} updated!`);
   } else {
