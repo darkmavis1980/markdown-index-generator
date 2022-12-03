@@ -1,6 +1,21 @@
 # Changelog
 
-## [v0.12.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.3...v0.12.0)
+## [v0.12.1-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.13.0-next.0...v0.12.1-next.0)
+
+## [v0.13.0-next.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0...v0.13.0-next.0) - 2022-12-03
+
+### Merged
+
+- Feature/remove oclif [`#44`](https://github.com/darkmavis1980/markdown-index-generator/pull/44)
+
+### Commits
+
+- Code cleanups [`cee0ee6`](https://github.com/darkmavis1980/markdown-index-generator/commit/cee0ee622dc4c422e79684058e928a5144c9ca04)
+- More code cleanups [`2a3b55b`](https://github.com/darkmavis1980/markdown-index-generator/commit/2a3b55b2f6cc6212fc8d55a06b78eba5bae3383b)
+- Updated release workflow [`6ee861f`](https://github.com/darkmavis1980/markdown-index-generator/commit/6ee861f84bfd9ab6865d0963ab5839e6a97e520b)
+- Restored test [`2d0de5c`](https://github.com/darkmavis1980/markdown-index-generator/commit/2d0de5c0bfae74256c3c237b4ac1e75085d4aaea)
+
+## [v0.12.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.3...v0.12.0) - 2022-12-02
 
 ## [v0.12.0-next.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.0-next.2...v0.12.0-next.3) - 2022-12-02
 
