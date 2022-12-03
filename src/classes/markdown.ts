@@ -25,7 +25,7 @@ export default class MarkdownParser {
   /**
    * Default title of the index
    */
-  private title = '## Index\n\n'
+  private title = '## Index\n\n';
 
   constructor(file: string) {
     if (!isFileValid(file)) {
@@ -39,8 +39,7 @@ export default class MarkdownParser {
 
   /**
    * Set the index title
-   * @param {string} title Text for the title
-   * @returns {void}
+   * @param title Text for the title
    */
   setTitle(title: string): void {
     this.title = `## ${title}\n\n`;
@@ -48,8 +47,7 @@ export default class MarkdownParser {
 
   /**
    * Set the depth for the generator
-   * @param {number} depth The depth value, a number between 2 and 5
-   * @returns {void}
+   * @param depth The depth value, a number between 2 and 5
    */
   setDepth(depth: number): void {
     if (depth < 2 || depth > 5) {
@@ -62,8 +60,8 @@ export default class MarkdownParser {
   /**
    * Goes through each line passed, and filters out everything that is not an
    * heading within the defined range
-   * @param {string[]} lines The array of lines found in the document
-   * @returns {string[]} The filtered out array
+   * @param lines The array of lines found in the document
+   * @returns The filtered out array
    */
   getHeadings(lines: string[]): string[] {
     const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm');
@@ -73,8 +71,8 @@ export default class MarkdownParser {
 
   /**
    * Parse a text and try to find if it's a numbered list item or not
-   * @param {string} text The heading to parse
-   * @returns {string} The style according to the type
+   * @param text The heading to parse
+   * @returns The style according to the type
    */
   getListStyle(text: string): string {
     const regex = /^(\d.\s)/;
@@ -88,8 +86,8 @@ export default class MarkdownParser {
 
   /**
    * Will parse the headings and return the links format with indentation in base of the heading
-   * @param {string[]} links The list of headings to parse
-   * @returns {string[]} The list of links
+   * @param links The list of headings to parse
+   * @returns The list of links
    */
   parseHeadings(links: string[]): string[] {
     return links.map(heading => {
@@ -109,7 +107,7 @@ export default class MarkdownParser {
 
   /**
    * Main function parser that reads the file and returns list of links
-   * @returns {string[]} The list of links
+   * @returns The list of links
    * @throws An Error exception
    */
   async parse(): Promise<string[]> {
@@ -131,9 +129,9 @@ export default class MarkdownParser {
 
   /**
    * Save the ouput of the links in a file
-   * @param {string} outputFile The filename where to store the output
+   * @param outputFile The filename where to store the output
    * @throws An Error exception
-   * @returns {Promise} The resolved await fs function
+   * @returns The resolved await fs function
    */
   async toFile(outputFile: string): Promise<void> {
     this.fileCache = ''
@@ -149,7 +147,7 @@ export default class MarkdownParser {
 
   /**
    * Replace the original source file by adding the index between the custom tags
-   * @returns {string} The data written
+   * @returns void
    * @throws An Error exception
    */
   async replaceOriginal(): Promise<void> {
@@ -167,7 +165,7 @@ export default class MarkdownParser {
 
   /**
    * Get the output of the parse and it returns it as a string
-   * @returns {string} The full output data
+   * @returns The full output data
    */
   toView(): string {
     this.fileCache = '';
