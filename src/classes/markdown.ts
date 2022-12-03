@@ -1,26 +1,26 @@
-import {promises as fs} from 'fs'
-import {stringToPermalink} from '../lib/utils'
-import {isFileValid} from '../lib/file'
-import {replaceTag, replaceBlock} from '../lib/tags'
-import {INDEX_TAG} from '../constants'
+import {promises as fs} from 'fs';
+import {stringToPermalink} from '../lib/utils';
+import {isFileValid} from '../lib/file';
+import {replaceTag, replaceBlock} from '../lib/tags';
+import {INDEX_TAG} from '../constants';
 
 export default class MarkdownParser {
   /**
    * The MarkDown filename
    */
-  private file: string
+  private file: string;
 
-  private fileCache: string
+  private fileCache: string;
 
   /**
    * Container for the list of links
    */
-  private links: string[]
+  private links: string[];
 
   /**
    * Depth of how many headings should be parsed, where 4 means h4, and maximum should be 5
    */
-  public depth = 4
+  public depth = 4;
 
   /**
    * Default title of the index
@@ -29,12 +29,12 @@ export default class MarkdownParser {
 
   constructor(file: string) {
     if (!isFileValid(file)) {
-      throw new Error('File is not valid')
+      throw new Error('File is not valid');
     }
 
-    this.file = file
-    this.fileCache = ''
-    this.links = []
+    this.file = file;
+    this.fileCache = '';
+    this.links = [];
   }
 
   /**
@@ -43,7 +43,7 @@ export default class MarkdownParser {
    * @returns {void}
    */
   setTitle(title: string): void {
-    this.title = `## ${title}\n\n`
+    this.title = `## ${title}\n\n`;
   }
 
   /**
@@ -53,10 +53,10 @@ export default class MarkdownParser {
    */
   setDepth(depth: number): void {
     if (depth < 2 || depth > 5) {
-      throw new Error('Depth value not valid')
+      throw new Error('Depth value not valid');
     }
 
-    this.depth = depth
+    this.depth = depth;
   }
 
   /**
@@ -66,9 +66,9 @@ export default class MarkdownParser {
    * @returns {string[]} The filtered out array
    */
   getHeadings(lines: string[]): string[] {
-    const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm')
+    const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm');
     return lines
-    .filter(line => line.match(regex))
+    .filter(line => line.match(regex));
   }
 
   /**
@@ -77,13 +77,13 @@ export default class MarkdownParser {
    * @returns {string} The style according to the type
    */
   getListStyle(text: string): string {
-    const regex = /^(\d.\s)/
-    const match = text.match(regex)
+    const regex = /^(\d.\s)/;
+    const match = text.match(regex);
     if (match) {
-      return match[1]
+      return match[1];
     }
 
-    return '- '
+    return '- ';
   }
 
   /**
@@ -93,18 +93,18 @@ export default class MarkdownParser {
    */
   parseHeadings(links: string[]): string[] {
     return links.map(heading => {
-      const textHeading: string = heading.replace(/#{2,5}\s/, '')
+      const textHeading: string = heading.replace(/#{2,5}\s/, '');
       if (textHeading.toLocaleLowerCase() === 'index') {
-        return ''
+        return '';
       }
 
-      const hashes = (heading.match(/#/g) || []).length
-      const indents = hashes <= 2 ? 0 : hashes - 2
-      const listStyle = this.getListStyle(textHeading)
-      const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`
-      return link
+      const hashes = (heading.match(/#/g) || []).length;
+      const indents = hashes <= 2 ? 0 : hashes - 2;
+      const listStyle = this.getListStyle(textHeading);
+      const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`;
+      return link;
     })
-    .filter(heading => heading !== '')
+    .filter(heading => heading !== '');
   }
 
   /**
@@ -114,15 +114,18 @@ export default class MarkdownParser {
    */
   async parse(): Promise<string[]> {
     try {
-      const data = await fs.readFile(this.file)
-      const decoded = data.toString('utf8')
-      this.fileCache = decoded
-      const markdown: string[] = [...replaceBlock(decoded, '```').split('\n')]
-      const links = this.getHeadings(markdown)
-      this.links = this.parseHeadings(links)
+      const data = await fs.readFile(this.file);
+      const decoded = data.toString('utf8');
+      this.fileCache = decoded;
+      const markdown: string[] = [...replaceBlock(decoded, '```').split('\n')];
+      const links = this.getHeadings(markdown);
+      this.links = this.parseHeadings(links);
       return this.links
-    } catch (error: any) {
-      throw new Error(error.message)
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      }
+      return [];
     }
   }
 
@@ -134,11 +137,13 @@ export default class MarkdownParser {
    */
   async toFile(outputFile: string): Promise<void> {
     this.fileCache = ''
-    const data = `${this.title}${this.links.join('\n')}`
+    const data = `${this.title}${this.links.join('\n')}`;
     try {
-      await fs.writeFile(outputFile, data)
-    } catch (error: any) {
-      throw new Error(error.message)
+      await fs.writeFile(outputFile, data);
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      }
     }
   }
 
@@ -149,12 +154,14 @@ export default class MarkdownParser {
    */
   async replaceOriginal(): Promise<void> {
     try {
-      const data = `${this.title}${this.links.join('\n')}`
-      const fileData = replaceTag(this.fileCache, INDEX_TAG, data)
-      await fs.writeFile(this.file, fileData)
-      this.fileCache = ''
-    } catch (error: any) {
-      throw new Error(error.message)
+      const data = `${this.title}${this.links.join('\n')}`;
+      const fileData = replaceTag(this.fileCache, INDEX_TAG, data);
+      await fs.writeFile(this.file, fileData);
+      this.fileCache = '';
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      }
     }
   }
 
@@ -163,7 +170,7 @@ export default class MarkdownParser {
    * @returns {string} The full output data
    */
   toView(): string {
-    this.fileCache = ''
-    return `${this.title}${this.links.join('\n')}`
+    this.fileCache = '';
+    return `${this.title}${this.links.join('\n')}`;
   }
 }

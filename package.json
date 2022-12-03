@@ -44,14 +44,14 @@
   "main": "lib/index.js",
   "repository": "darkmavis1980/markdown-index-generator",
   "scripts": {
-    "posttest": "eslint . --ext .ts --config .eslintrc.js",
+    "posttest": "npm run eslint",
     "build": "tsc -b",
-    "prepack": "rm -rf lib && tsc -b",
+    "prepack": "rm -rf lib && npm run build",
     "test": "jest --verbose",
     "test:watch": "jest --verbose --watch",
     "changelog": "auto-changelog",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "eslint": "eslint . --ext .ts",
+    "eslint": "eslint . --ext .ts --config .eslintrc.js",
     "coverage": "nyc --reporter=lcov npm run test"
   },
   "types": "lib/index.d.ts",
