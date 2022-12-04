@@ -1,6 +1,12 @@
 # Changelog
 
-## [v0.12.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1-next.1...v0.12.1)
+## [v0.12.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1...v0.12.2)
+
+### Commits
+
+- Added one more test [`7bffabc`](https://github.com/darkmavis1980/markdown-index-generator/commit/7bffabcb85b8e11286d775188cfe17a013d8a0cc)
+
+## [v0.12.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1-next.1...v0.12.1) - 2022-12-03
 
 ### Commits
 
