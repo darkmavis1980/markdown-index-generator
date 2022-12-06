@@ -58,9 +58,6 @@
     "output": "CHANGELOG.md",
     "template": "changelog.tpl.hbs",
     "unreleased": true,
-    "commitLimit": 10,
-    "includeBranch": [
-      "main"
-    ]
+    "commitLimit": 10
   }
 }
