@@ -1,6 +1,23 @@
 # Changelog
 
-## [v0.12.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1...v0.12.2)
+## [v0.12.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.3...v0.12.4)
+
+### Commits
+
+- Removed settings from auto-changelog [`8769fd9`](https://github.com/darkmavis1980/markdown-index-generator/commit/8769fd9b28ec4bb48c070c2e4a80f6ce82afa3cb)
+
+## [v0.12.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.2...v0.12.3) - 2022-12-06
+
+### Merged
+
+- Bugfix/fix coverage [`#46`](https://github.com/darkmavis1980/markdown-index-generator/pull/46)
+- Bugfix/code cleanups [`#45`](https://github.com/darkmavis1980/markdown-index-generator/pull/45)
+
+### Commits
+
+- Fixed issue with flag [`f21d3a7`](https://github.com/darkmavis1980/markdown-index-generator/commit/f21d3a793bf27010d7dab6e2d1b83bbacc362ded)
+
+## [v0.12.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.1...v0.12.2) - 2022-12-03
 
 ### Commits
 
