@@ -2,8 +2,8 @@ import {INDEX_TAG} from '../constants'
 
 /**
  * Tries to the first H2 title and adds the index tag right before it
- * @param {string} text The text to process
- * @returns {string} The updated text
+ * @param text The text to process
+ * @returns The updated text
  */
 export const findFirstParagraph = (text: string): string => {
   const regex = /^(##\s.+)\n{1,3}/gm
@@ -15,10 +15,10 @@ export const findFirstParagraph = (text: string): string => {
 /**
  * It replace the content of a given tag from a source string
  *
- * @param {string} source The text to replace
- * @param {string} tag The tag to find
- * @param {string} content The content to replace in between the tags
- * @returns {string} The parsed string
+ * @param source The text to replace
+ * @param tag The tag to find
+ * @param content The content to replace in between the tags
+ * @returns The parsed string
  */
 export const replaceTag = (source: string, tag: string, content: string): string => {
   const start = `<!-- ${tag}-start -->`
@@ -43,9 +43,9 @@ export const replaceTag = (source: string, tag: string, content: string): string
 /**
  * Takes a string as an input and remove the content in between the blocks
  *
- * @param {string} source The source text to replace
- * @param {string} block The block of repeated code to encapsulate content
- * @returns {string} The replaced string
+ * @param source The source text to replace
+ * @param block The block of repeated code to encapsulate content
+ * @returns The replaced string
  */
 export const replaceBlock = (source: string, block: string): string => {
   const regex = new RegExp(`${block}(.+?)${block}`, 'gms')
