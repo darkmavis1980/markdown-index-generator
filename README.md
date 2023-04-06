@@ -17,10 +17,13 @@ $ npm install -g md-index-generator
 $ md-index-generator COMMAND
 running command...
 $ md-index-generator (-v|--version|version)
-md-index-generator/0.10.0 darwin-x64 node-v14.15.3
+1.0.0
+
+// Replace the passed markdown file
+$ md-index-generator <MarkDown.md>
 
 // Display the output on the shell
-$ md-index-generator <MarkDown.md>
+$ md-index-generator <MarkDown.md> --dry-run
 
 // Store the output in a file
 $ md-index-generator <MARKDOWNFILE.md> --output <Index.md>
@@ -30,10 +33,11 @@ $ md-index-generator <MarkDown.md> --depth 3
 
 // Set the title of the index, output will start with "## Docs index"
 $ md-index-generator <MarkDown.md> --title "Docs index"
-
-// Replace the passed markdown file
-$ md-index-generator <MarkDown.md> --replace
 ```
+
+## Breaking Changes
+
+From version `1.x` onward, the logic of the CLI has changed, where by default it replace the index of the source file, while before you had to explicitly use the `--replace` flag to do so. If you want to see the index generated on screen, you must pass the `--dry-run` flag instead.
 
 ### Optional flags
 
@@ -43,7 +47,7 @@ $ md-index-generator <MarkDown.md> --replace
 
 `-t, --title <VALUE>` This set the title for the index list, by default is set to `Index`
 
-`-r, --replace` This flag will set to add the index in the source file
+`-r, --dry-run` This flag will show the output on screen, but it will not update the source file
 
 #### Add the index in the source file
 

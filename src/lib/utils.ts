@@ -5,10 +5,6 @@
  */
 
 export function stringToPermalink(string: string): string {
-  if (typeof string !== 'string') {
-    return string
-  }
-
   return string
   .replace(/(-)+\1+/g, '')
   .replace(/\s/g, '-')

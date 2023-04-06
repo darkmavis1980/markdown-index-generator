@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "0.13.0",
+  "version": "1.0.0",
   "author": "Alessio Michelini",
   "bin": {
     "md-index-generator": "./bin/run"
@@ -11,21 +11,21 @@
     "tslib": "^2.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/jest": "^29.4.0",
-    "@types/node": "^18.15.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "auto-changelog": "^2.4.0",
     "babel-jest": "^29.5.0",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "jest": "^29.5.0",
     "nyc": "^15.1.0",
-    "ts-jest": "^29.0.5",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.3"
   },
   "engines": {
     "node": ">=16.0.0"

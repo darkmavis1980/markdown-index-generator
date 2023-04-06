@@ -1,6 +1,17 @@
 # Changelog
 
-## [v0.13.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.8...v0.13.0)
+## [v1.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.13.0...v1.0.0)
+
+### Merged
+
+- Removed node 14 support [`#52`](https://github.com/darkmavis1980/markdown-index-generator/pull/52)
+
+### Commits
+
+- Update to TS 5 [`8061c4d`](https://github.com/darkmavis1980/markdown-index-generator/commit/8061c4d347fa0bd75a3dffd5323d608061c73377)
+- [BREAKING] Changed the default behaviour to update the file [`86d0ae6`](https://github.com/darkmavis1980/markdown-index-generator/commit/86d0ae67f83d11986ef4d5ccc909499ef1d0fb0a)
+
+## [v0.13.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.12.8...v0.13.0) - 2023-03-11
 
 ### Merged
 

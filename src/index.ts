@@ -26,13 +26,20 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   if (flags?.output) {
     await parser.toFile(flags.output);
     console.log(`File ${flags.output} saved!`);
-  } else if (flags?.replace) {
+    return process.exit(0);
+  }
+
+  if (!flags?.dryRun) {
     await parser.replaceOriginal();
     console.log(`File ${file} updated!`);
-  } else {
+    return process.exit(0);
+  }
+
+  if (flags?.dryRun) {
     console.log('--- Begin MarkDown ---');
     console.log(parser.toView());
     console.log('--- End Markdown ---');
+    return process.exit(0);
   }
 }
 
