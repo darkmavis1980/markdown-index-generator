@@ -1,6 +1,16 @@
 # Changelog
 
-## [v1.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.13.0...v1.0.0)
+## [v1.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.0...v1.0.1)
+
+### Merged
+
+- Feature/update replace logic [`#53`](https://github.com/darkmavis1980/markdown-index-generator/pull/53)
+
+### Commits
+
+- Updated dependencies [`5894216`](https://github.com/darkmavis1980/markdown-index-generator/commit/58942166520a87f1777157f6afc869c193fed62c)
+
+## [v1.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v0.13.0...v1.0.0) - 2023-04-06
 
 ### Merged
 
