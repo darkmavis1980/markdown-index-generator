@@ -39,7 +39,6 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
     console.log('--- Begin MarkDown ---');
     console.log(parser.toView());
     console.log('--- End Markdown ---');
-    return process.exit(0);
   }
 }
 

@@ -3,9 +3,10 @@ import MarkdownIndexGenerator from '../src/index';
 describe('MarkdownIndexGenerator', () => {
   beforeEach(() => {
     console.log = jest.fn();
+    jest.spyOn(process, 'exit');
   });
 
-  afterEach(() => {
+  afterAll(() => {
     jest.clearAllMocks();
   });
 
