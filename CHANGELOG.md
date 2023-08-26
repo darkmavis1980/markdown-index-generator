@@ -1,6 +1,26 @@
 # Changelog
 
-## [v1.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.0...v1.0.1)
+## [v1.0.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.2...v1.0.2)
+
+### Merged
+
+- [bugfix] Fix issue with missing commander [`#55`](https://github.com/darkmavis1980/markdown-index-generator/pull/55)
+
+### Commits
+
+- [bugfix] Fix issue with tests [`b13bdd8`](https://github.com/darkmavis1980/markdown-index-generator/commit/b13bdd8d49c671b67a76b28ab9d3ac925c8a9ae4)
+
+## [v1.0.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.1...v1.0.2) - 2023-06-08
+
+### Merged
+
+- Bugfix/maintenance update may 2023 [`#54`](https://github.com/darkmavis1980/markdown-index-generator/pull/54)
+
+### Commits
+
+- [bugfix] Fix issue with missing commander [`fbf63cf`](https://github.com/darkmavis1980/markdown-index-generator/commit/fbf63cf59563ab0f49fe5cd54f92a12ac3c7648d)
+
+## [v1.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.0...v1.0.1) - 2023-05-28
 
 ### Merged
 
