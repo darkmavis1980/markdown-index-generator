@@ -1,6 +1,12 @@
 # Changelog
 
-## [v1.0.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.2...v1.0.3)
+## [v1.0.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.3...v1.0.4)
+
+### Commits
+
+- chore: update dependencies [`1c4c890`](https://github.com/darkmavis1980/markdown-index-generator/commit/1c4c890fe919cc0ef617784c8f126b08383bc372)
+
+## [v1.0.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.2...v1.0.3) - 2023-08-26
 
 ### Merged
 
