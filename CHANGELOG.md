@@ -1,6 +1,17 @@
 # Changelog
 
-## [v1.0.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.3...v1.0.4)
+## [v1.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.4...v1.1.0)
+
+### Merged
+
+- Bugfix/fix critical dependency [`#58`](https://github.com/darkmavis1980/markdown-index-generator/pull/58)
+
+### Commits
+
+- feat: upgrade to commander 12 [`c2e8dbe`](https://github.com/darkmavis1980/markdown-index-generator/commit/c2e8dbe7f31fbf740bb7107327fc9d6676f85e6d)
+- chore: set tests to be randomized [`00a4814`](https://github.com/darkmavis1980/markdown-index-generator/commit/00a4814e015f6f611450c903a6d604cb1bb10710)
+
+## [v1.0.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.3...v1.0.4) - 2023-12-07
 
 ### Commits
 
