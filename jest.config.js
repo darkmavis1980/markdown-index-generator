@@ -4,6 +4,7 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   verbose: true,
+  randomize: true,
   coverageDirectory: 'coverage',
   moduleFileExtensions: ["ts", "js", "json"],
   testMatch: [
