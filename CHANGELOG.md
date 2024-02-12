@@ -1,6 +1,20 @@
 # Changelog
 
-## [v1.0.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.3...v1.0.4)
+## [v2.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.4...v2.0.0)
+
+### Merged
+
+- Bugfix/fix critical dependency [`#58`](https://github.com/darkmavis1980/markdown-index-generator/pull/58)
+
+### Commits
+
+- feat: upgrade to commander 12 [`c2e8dbe`](https://github.com/darkmavis1980/markdown-index-generator/commit/c2e8dbe7f31fbf740bb7107327fc9d6676f85e6d)
+- !feat: drop support for node 16, add support for node 20 [`7685d2a`](https://github.com/darkmavis1980/markdown-index-generator/commit/7685d2ab1f75163cfc6dbd0ad6f30bf6296d381e)
+- !feat: set ts to target ES2021 instead of ES2017 [`86cf2c4`](https://github.com/darkmavis1980/markdown-index-generator/commit/86cf2c4c5ca896c194bcb50ebfb216d5559050ad)
+- !feat: set mininum node version to 18 [`b5dd731`](https://github.com/darkmavis1980/markdown-index-generator/commit/b5dd731a397d25f0871b4d64897cd6b8264220e7)
+- chore: set tests to be randomized [`00a4814`](https://github.com/darkmavis1980/markdown-index-generator/commit/00a4814e015f6f611450c903a6d604cb1bb10710)
+
+## [v1.0.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.3...v1.0.4) - 2023-12-07
 
 ### Commits
 
