@@ -44,19 +44,21 @@ describe('MarkdownParser (Class)', () => {
   describe('parseHeadings', () => {
     it('should return the markdown links from a list of headings', () => {
       const parser = new MarkdownParser(mockFile);
-      const mockHeadings = ['## Heading 1', '### Heading 2'];
+      const mockHeadings = ['## Heading 1', '### Heading 2', '### Heading-3', '### Heading_4'];
       const result = parser.parseHeadings(mockHeadings);
-      expect(result.length).toEqual(2);
+      expect(result.length).toEqual(4);
       expect(result[0]).toEqual('- [Heading 1](#heading-1)');
       expect(result[1]).toEqual('  - [Heading 2](#heading-2)');
+      expect(result[2]).toEqual('  - [Heading-3](#heading-3)');
+      expect(result[3]).toEqual('  - [Heading_4](#heading_4)');
     })
 
     it('should properly sanitize the heading for special characters', () => {
       const parser = new MarkdownParser(mockFile);
-      const mockHeadings = ['## Index', '## Heading 1 `@hello-/(world)!?`', '### Heading 2 `@hello-team/test-docs`', '## How to deploy the `@hello-team/test-docs` package to NPM'];
+      const mockHeadings = ['## Index', '## Heading_1 `@hello-/(world)!?`', '### Heading 2 `@hello-team/test-docs`', '## How to deploy the `@hello-team/test-docs` package to NPM'];
       const result = parser.parseHeadings(mockHeadings);
       expect(result.length).toEqual(3);
-      expect(result[0]).toEqual('- [Heading 1 `@hello-/(world)!?`](#heading-1-hello-world)');
+      expect(result[0]).toEqual('- [Heading_1 `@hello-/(world)!?`](#heading_1-hello-world)');
       expect(result[1]).toEqual('  - [Heading 2 `@hello-team/test-docs`](#heading-2-hello-teamtest-docs)');
       expect(result[2]).toEqual('- [How to deploy the `@hello-team/test-docs` package to NPM](#how-to-deploy-the-hello-teamtest-docs-package-to-npm)');
     })

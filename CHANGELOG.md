@@ -1,6 +1,17 @@
 # Changelog
 
-## [v2.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.4...v2.0.0)
+## [v2.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.0...v2.0.1)
+
+### Merged
+
+- Feature/upgrade to commander 12 [`#59`](https://github.com/darkmavis1980/markdown-index-generator/pull/59)
+
+### Commits
+
+- chore: update dependencies [`19ae036`](https://github.com/darkmavis1980/markdown-index-generator/commit/19ae036304190c5dfbfe416cd4a4fb32a2ccfa4d)
+- fix: refactored code to include underscore as valid symbol to links [`6326afe`](https://github.com/darkmavis1980/markdown-index-generator/commit/6326afe3dede1273ad0a49859c90659dbc254830)
+
+## [v2.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v1.0.4...v2.0.0) - 2024-02-12
 
 ### Merged
 
