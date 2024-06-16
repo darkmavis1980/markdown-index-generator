@@ -1,6 +1,16 @@
 # Changelog
 
-## [v2.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.0...v2.0.1)
+## [v2.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.1...v2.1.0)
+
+### Merged
+
+- Bugfix/60 issue with headers with underscore values [`#61`](https://github.com/darkmavis1980/markdown-index-generator/pull/61)
+
+### Commits
+
+- feat: upgrade eslint version and update configuration [`cc69ea8`](https://github.com/darkmavis1980/markdown-index-generator/commit/cc69ea8f00ac34c6cc3d2eadf4031f5fdef3ee36)
+
+## [v2.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.0...v2.0.1) - 2024-03-05
 
 ### Merged
 
