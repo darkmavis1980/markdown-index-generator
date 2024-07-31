@@ -90,9 +90,10 @@ export default class MarkdownParser {
    * @returns The list of links
    */
   parseHeadings(links: string[]): string[] {
+    const currentTitle = this.title.replace(/##\s/gmi, '').toLocaleLowerCase().trim();
     return links.map(heading => {
       const textHeading: string = heading.replace(/#{2,5}\s/, '');
-      if (textHeading.toLocaleLowerCase() === 'index') {
+      if (textHeading.toLocaleLowerCase() === 'index' || textHeading.toLocaleLowerCase() === currentTitle) {
         return '';
       }
 
