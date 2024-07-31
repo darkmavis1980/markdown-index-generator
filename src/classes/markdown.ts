@@ -75,7 +75,7 @@ export default class MarkdownParser {
    * @returns The style according to the type
    */
   getListStyle(text: string): string {
-    const regex = /^(\d.\s)/gmi;
+    const regex = /^(\d.\s)/;
     const match = text.match(regex);
     if (match) {
       return match[1];
