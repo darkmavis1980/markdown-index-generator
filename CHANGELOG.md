@@ -1,6 +1,19 @@
 # Changelog
 
-## [v2.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.1...v2.1.0)
+## [v2.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.0...v2.1.1)
+
+### Merged
+
+- Bugfix/dependencies update [`#64`](https://github.com/darkmavis1980/markdown-index-generator/pull/64)
+
+### Commits
+
+- chore: update dependencies [`0aa88e7`](https://github.com/darkmavis1980/markdown-index-generator/commit/0aa88e70cb0fe10266bd1d0788ba1e6cea429dd9)
+- chore: updated nyc and @types/node packages [`adb249a`](https://github.com/darkmavis1980/markdown-index-generator/commit/adb249aac0360b20892ea2b31dbf616862d3489c)
+- fix: issue where the title was added to the generated index [`984f33b`](https://github.com/darkmavis1980/markdown-index-generator/commit/984f33b8f3c027c143ca912303232453a1172ca0)
+- fix: issue with numbered headings [`c0b2448`](https://github.com/darkmavis1980/markdown-index-generator/commit/c0b2448f3040d9f908a2e04b84854b12c1cd8713)
+
+## [v2.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.0.1...v2.1.0) - 2024-06-16
 
 ### Merged
 
