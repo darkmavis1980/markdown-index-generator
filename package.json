@@ -17,6 +17,7 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.13",
+    "@typescript-eslint/parser": "^8.28.0",
     "auto-changelog": "^2.5.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^16.0.0",
@@ -52,7 +53,7 @@
     "test:watch": "jest --verbose --watch",
     "changelog": "auto-changelog",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "eslint": "npx eslint . --ext .ts",
+    "eslint": "npx eslint -c eslint.config.mjs",
     "prettier:check": "npx prettier ./src/**/*.ts ./test/**/*.test.ts --check",
     "prettier:write": "npx prettier ./src/**/*.ts ./test/**/*.test.ts --write",
     "coverage": "nyc --reporter=lcov npm run test"
