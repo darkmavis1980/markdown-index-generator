@@ -1,8 +1,8 @@
-import {promises as fs} from 'fs';
-import {stringToPermalink} from '../lib/utils';
-import {isFileValid} from '../lib/file';
-import {replaceTag, replaceBlock} from '../lib/tags';
-import {INDEX_TAG} from '../constants';
+import { promises as fs } from 'fs';
+import { stringToPermalink } from '../lib/utils';
+import { isFileValid } from '../lib/file';
+import { replaceTag, replaceBlock } from '../lib/tags';
+import { INDEX_TAG } from '../constants';
 
 export default class MarkdownParser {
   /**
@@ -65,8 +65,7 @@ export default class MarkdownParser {
    */
   getHeadings(lines: string[]): string[] {
     const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm');
-    return lines
-    .filter(line => line.match(regex));
+    return lines.filter(line => line.match(regex));
   }
 
   /**
@@ -90,20 +89,21 @@ export default class MarkdownParser {
    * @returns The list of links
    */
   parseHeadings(links: string[]): string[] {
-    const currentTitle = this.title.replace(/##\s/gmi, '').toLocaleLowerCase().trim();
-    return links.map(heading => {
-      const textHeading: string = heading.replace(/#{2,5}\s/, '');
-      if (textHeading.toLocaleLowerCase() === 'index' || textHeading.toLocaleLowerCase() === currentTitle) {
-        return '';
-      }
+    const currentTitle = this.title.replace(/##\s/gim, '').toLocaleLowerCase().trim();
+    return links
+      .map(heading => {
+        const textHeading: string = heading.replace(/#{2,5}\s/, '');
+        if (textHeading.toLocaleLowerCase() === 'index' || textHeading.toLocaleLowerCase() === currentTitle) {
+          return '';
+        }
 
-      const hashes = (heading.match(/#/g) || []).length;
-      const indents = hashes <= 2 ? 0 : hashes - 2;
-      const listStyle = this.getListStyle(textHeading);
-      const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`;
-      return link;
-    })
-    .filter(heading => heading !== '');
+        const hashes = (heading.match(/#/g) || []).length;
+        const indents = hashes <= 2 ? 0 : hashes - 2;
+        const listStyle = this.getListStyle(textHeading);
+        const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`;
+        return link;
+      })
+      .filter(heading => heading !== '');
   }
 
   /**
@@ -119,7 +119,7 @@ export default class MarkdownParser {
       const markdown: string[] = [...replaceBlock(decoded, '```').split('\n')];
       const links = this.getHeadings(markdown);
       this.links = this.parseHeadings(links);
-      return this.links
+      return this.links;
     } catch (error) {
       if (error instanceof Error) {
         throw new Error(error.message);
@@ -135,7 +135,7 @@ export default class MarkdownParser {
    * @returns The resolved await fs function
    */
   async toFile(outputFile: string): Promise<void> {
-    this.fileCache = ''
+    this.fileCache = '';
     const data = `${this.title}${this.links.join('\n')}`;
     try {
       await fs.writeFile(outputFile, data);

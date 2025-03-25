@@ -6,8 +6,8 @@
 
 export function stringToPermalink(string: string): string {
   return string
-  .replace(/(-)+\1+/g, '')
-  .replace(/\s/g, '-')
-  .replace(/[^\d\w_-]/g, '')
-  .toLowerCase()
+    .replace(/(-)+\1+/g, '')
+    .replace(/\s/g, '-')
+    .replace(/[^\d\w_-]/g, '')
+    .toLowerCase();
 }
