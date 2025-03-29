@@ -1,4 +1,4 @@
-import {isFileValid} from '../../src/lib/file'
+import { isFileValid } from '../../src/lib/file';
 
 describe('Utils', () => {
   describe('isFileValid', () => {
@@ -6,14 +6,13 @@ describe('Utils', () => {
       expect(isFileValid('test')).toBeFalsy();
       expect(isFileValid('/test/')).toBeFalsy();
       expect(isFileValid('/test.js')).toBeFalsy();
-    })
+    });
 
     it('should return true if the file is correct', () => {
       expect(isFileValid('test.md')).toBeTruthy();
       expect(isFileValid('./test.md')).toBeTruthy();
       expect(isFileValid('./somepath/test.md')).toBeTruthy();
       expect(isFileValid('./somepath/test.mdx')).toBeTruthy();
-    })
-  })
-})
-
+    });
+  });
+});

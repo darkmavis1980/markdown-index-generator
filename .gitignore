@@ -10,3 +10,4 @@ node_modules
 coverage
 .DS_Store
 .vscode
+tsconfig.tsbuildinfo

@@ -1,4 +1,4 @@
-import {INDEX_TAG} from '../constants';
+import { INDEX_TAG } from '../constants';
 
 /**
  * Tries to the first H2 title and adds the index tag right before it
@@ -10,7 +10,7 @@ export const findFirstParagraph = (text: string): string => {
   const split = text.split(regex);
   split.splice(1, 0, `<!-- ${INDEX_TAG}-start -->\n<!-- ${INDEX_TAG}-end -->\n\n`);
   return split.join('');
-}
+};
 
 /**
  * It replace the content of a given tag from a source string
@@ -38,7 +38,7 @@ export const replaceTag = (source: string, tag: string, content: string): string
   const preTagContent = source.slice(0, tagStartPosition + start.length);
   const postTagContent = source.slice(tagEndPosition);
   return `${preTagContent}\n${content}\n${postTagContent}`;
-}
+};
 
 /**
  * Takes a string as an input and remove the content in between the blocks
@@ -50,4 +50,4 @@ export const replaceTag = (source: string, tag: string, content: string): string
 export const replaceBlock = (source: string, block: string): string => {
   const regex = new RegExp(`${block}(.+?)${block}`, 'gms');
   return source.replace(regex, '');
-}
+};

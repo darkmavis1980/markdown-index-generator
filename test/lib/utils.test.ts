@@ -1,4 +1,4 @@
-import {stringToPermalink} from '../../src/lib/utils'
+import { stringToPermalink } from '../../src/lib/utils';
 
 describe('Utils', () => {
   describe('stringToPermalink', () => {
@@ -18,4 +18,3 @@ describe('Utils', () => {
     });
   });
 });
-

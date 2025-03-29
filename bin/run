@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env npx tsx
 
-const { program } = require('commander');
-const { version } = require('../package.json');
-const MarkdownIndexGenerator = require('../lib/index.js');
+import { program } from 'commander';
+import { version } from '../package.json';
+import MarkdownIndexGenerator from '../lib/index.js';
 
 program
   .version(version)

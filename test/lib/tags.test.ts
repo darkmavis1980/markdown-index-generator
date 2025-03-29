@@ -1,4 +1,4 @@
-import {replaceTag, replaceBlock, findFirstParagraph} from '../../src/lib/tags';
+import { replaceTag, replaceBlock, findFirstParagraph } from '../../src/lib/tags';
 
 describe('tags.ts', () => {
   describe('findFirstParagraph (Function)', () => {
@@ -8,7 +8,7 @@ A paragraph\n
 ## Subtitle\n
 Some text\n`;
 
-      const result = findFirstParagraph(mockContent)
+      const result = findFirstParagraph(mockContent);
       expect(result).toContain('<!-- index-start -->');
       expect(result).toContain('<!-- index-end -->');
     });
@@ -29,7 +29,7 @@ Some text\n`;
       <!-- test-start -->
       Some test`;
 
-      expect(() => replaceTag(mockContent, 'test', 'hello')).toThrow()
+      expect(() => replaceTag(mockContent, 'test', 'hello')).toThrow();
 
       const mockContent2 = `# Some Title
       Some test`;
