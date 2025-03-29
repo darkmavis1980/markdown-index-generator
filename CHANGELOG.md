@@ -1,6 +1,6 @@
 # Changelog
 
-## [v2.2.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.1...v2.2.0)
+## [v3.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.1...v3.0.0)
 
 ### Merged
 
