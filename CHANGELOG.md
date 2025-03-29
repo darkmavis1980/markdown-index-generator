@@ -1,6 +1,25 @@
 # Changelog
 
-## [v2.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.0...v2.1.1)
+## [v2.2.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.1...v2.2.0)
+
+### Merged
+
+- Bugfix/fix issue with title [`#65`](https://github.com/darkmavis1980/markdown-index-generator/pull/65)
+
+### Commits
+
+- feat: remove legacy packages [`90b249e`](https://github.com/darkmavis1980/markdown-index-generator/commit/90b249eb537b1efc283556383c4baf9f5beffcbd)
+- chore: update dependency [`5f5bcc6`](https://github.com/darkmavis1980/markdown-index-generator/commit/5f5bcc6ba28818d549e84f90fb01bb2ea61032b9)
+- feat: add tsx [`fb3a425`](https://github.com/darkmavis1980/markdown-index-generator/commit/fb3a4255b321a005431147b09c432c3f3b16a75b)
+- fix: add missing package [`1db784c`](https://github.com/darkmavis1980/markdown-index-generator/commit/1db784c2a921996e64fddf11e1114c1f7b967b01)
+- fix: cleaned up code [`ce7e97b`](https://github.com/darkmavis1980/markdown-index-generator/commit/ce7e97b3fb21ae5e71cf13bd2b1d8a1084313690)
+- fix: add missing package [`c024b12`](https://github.com/darkmavis1980/markdown-index-generator/commit/c024b12d378c845a1434a0ff837257f69a3e5326)
+- feat: add prettier [`67ee3c5`](https://github.com/darkmavis1980/markdown-index-generator/commit/67ee3c5de749eaf9a6045aa9b5c1e8aed55f7255)
+- feat: upgrade commander to latest version [`d99fb91`](https://github.com/darkmavis1980/markdown-index-generator/commit/d99fb910b49af7500eb50938f08726c3854b4dec)
+- chore: removed legacy mocha configuration [`5c77682`](https://github.com/darkmavis1980/markdown-index-generator/commit/5c776828935a92136f5bfc1d492b20c0fe40c4f6)
+- fix: update code to use ESM [`5443145`](https://github.com/darkmavis1980/markdown-index-generator/commit/5443145531ebdca5c5890b30b5086e4c4a31a126)
+
+## [v2.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.0...v2.1.1) - 2024-07-31
 
 ### Merged
 
