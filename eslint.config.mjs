@@ -56,7 +56,7 @@ const recommendedTypeScriptConfigs = [
 ];
 
 export default [
-    { ignores: ['docs/*', 'build/*', 'lib/*', 'dist/*'] }, // global ignores
+    { ignores: ['docs/*', 'build/*', 'lib/*', 'dist/*', 'test/*'] }, // global ignores
     eslintJs.configs.recommended,
     ...recommendedTypeScriptConfigs,
     customTypescriptConfig,
