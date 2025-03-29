@@ -1,6 +1,13 @@
 # Changelog
 
-## [v3.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.1...v3.0.0)
+## [v3.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.0...v3.0.1)
+
+### Merged
+
+- fix: issue with TS configuration [`#67`](https://github.com/darkmavis1980/markdown-index-generator/pull/67)
+- Feature/upgrade linting [`#66`](https://github.com/darkmavis1980/markdown-index-generator/pull/66)
+
+## [v3.0.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v2.1.1...v3.0.0) - 2025-03-29
 
 ### Merged
 
