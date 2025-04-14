@@ -174,4 +174,6 @@ export class MarkdownParser {
   }
 }
 
-export default MarkdownParser;
+export {
+  MarkdownParser as default
+};
