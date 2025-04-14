@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import { version } from '../package.json' assert { type: 'json' };
+import jsonData from '../package.json' assert { type: 'json' };
 import { MarkdownIndexGenerator } from '../lib/index.js';
 
 program
-  .version(version)
+  .version(jsonData.version)
   .arguments('<file>', 'The file to parse')
   .option('-o, --output <outputFile>', 'Output will be saved in the defined file')
   .option('-d, --depth <depth>', 'Depth of the headings to parse, 4 means \'till h4\'', 4)
