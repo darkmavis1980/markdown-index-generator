@@ -2,7 +2,7 @@ import MarkDownParser from './classes/markdown';
 import { Flags } from './interfaces/types';
 import { DEFAULT_VALUES } from './constants';
 
-const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
+export const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   if (!flags) {
     flags = {...DEFAULT_VALUES};
   }
@@ -42,4 +42,6 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   }
 }
 
-export default MarkdownIndexGenerator;
+export {
+  MarkdownIndexGenerator as default
+};
