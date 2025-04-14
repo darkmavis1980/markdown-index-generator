@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import { version } from '../package.json' assert { type: 'json' };
-import MarkdownIndexGenerator from '../lib/index.js';
+import { MarkdownIndexGenerator } from '../lib/index.js';
 
 program
   .version(version)

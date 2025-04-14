@@ -1,4 +1,4 @@
-import MarkdownIndexGenerator from '../src/index';
+import { MarkdownIndexGenerator } from '../src/index';
 
 describe('MarkdownIndexGenerator', () => {
   beforeEach(() => {
