@@ -42,4 +42,4 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   }
 }
 
-export = MarkdownIndexGenerator;
+export default MarkdownIndexGenerator;
