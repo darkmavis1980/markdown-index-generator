@@ -1,6 +1,12 @@
 # Changelog
 
-## [v3.0.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.1...v3.0.2)
+## [v3.0.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.2...v3.0.3)
+
+### Commits
+
+- fix: prettier issue [`1966f93`](https://github.com/darkmavis1980/markdown-index-generator/commit/1966f93761ee9c4c337b9c2ccb5994fffd05cc1f)
+
+## [v3.0.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.1...v3.0.2) - 2025-04-22
 
 ### Commits
 
