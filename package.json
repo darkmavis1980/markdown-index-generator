@@ -1,7 +1,7 @@
 {
   "name": "md-index-generator",
   "description": "Parses a markdown document and creates an index based on headings",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": "Alessio Michelini",
   "type": "module",
   "bin": {

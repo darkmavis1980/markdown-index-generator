@@ -1,6 +1,14 @@
 # Changelog
 
-## [v3.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.0...v3.0.1)
+## [v3.0.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.1...v3.0.2)
+
+### Commits
+
+- chore: remove unused dependencies and update package scripts [`83686b2`](https://github.com/darkmavis1980/markdown-index-generator/commit/83686b20bb54adb2e001808fabde6096ab470cbd)
+- fix: figure out issue with tsx in WSL [`978ce3c`](https://github.com/darkmavis1980/markdown-index-generator/commit/978ce3c2a35a24b185e59f461cc1e42ab58f2399)
+- chore: refactor MarkdownParser to use named exports and update import statement [`d0a4668`](https://github.com/darkmavis1980/markdown-index-generator/commit/d0a46688c8e3e9c60e3735c53f6e65a43190f013)
+
+## [v3.0.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.0...v3.0.1) - 2025-03-29
 
 ### Merged
 
