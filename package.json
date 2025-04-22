@@ -10,7 +10,8 @@
   "bugs": "https://github.com/experimental/markdown-index-generator/issues",
   "dependencies": {
     "commander": "^13.1.0",
-    "tslib": "^2.8.1"
+    "tslib": "^2.8.1",
+    "tsx": "^4.19.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
