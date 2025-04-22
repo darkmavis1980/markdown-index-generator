@@ -4,7 +4,7 @@ import { isFileValid } from '../lib/file';
 import { replaceTag, replaceBlock } from '../lib/tags';
 import { INDEX_TAG } from '../constants';
 
-export default class MarkdownParser {
+export class MarkdownParser {
   /**
    * The MarkDown filename
    */
@@ -173,3 +173,5 @@ export default class MarkdownParser {
     return `${this.title}${this.links.join('\n')}`;
   }
 }
+
+export { MarkdownParser as default };

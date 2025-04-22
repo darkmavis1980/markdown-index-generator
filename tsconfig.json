@@ -4,7 +4,7 @@
     "importHelpers": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "ES2022",
     "outDir": "lib",
     "rootDir": "src",
     "strict": true,

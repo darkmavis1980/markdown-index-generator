@@ -1,11 +1,11 @@
-#!/usr/bin/env npx tsx
+#!/usr/bin/env -S npx tsx
 
 import { program } from 'commander';
-import { version } from '../package.json';
-import MarkdownIndexGenerator from '../lib/index.js';
+import jsonData from '../package.json' with { type: 'json' };
+import { MarkdownIndexGenerator } from '../lib/index.js';
 
 program
-  .version(version)
+  .version(jsonData.version)
   .arguments('<file>', 'The file to parse')
   .option('-o, --output <outputFile>', 'Output will be saved in the defined file')
   .option('-d, --depth <depth>', 'Depth of the headings to parse, 4 means \'till h4\'', 4)

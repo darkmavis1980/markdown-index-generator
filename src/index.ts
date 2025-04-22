@@ -1,8 +1,8 @@
-import MarkDownParser from './classes/markdown';
+import { MarkdownParser } from './classes/markdown';
 import { Flags } from './interfaces/types';
 import { DEFAULT_VALUES } from './constants';
 
-const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
+export const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   if (!flags) {
     flags = {...DEFAULT_VALUES};
   }
@@ -11,7 +11,7 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
     throw 'Missing file to parse';
   }
 
-  const parser = new MarkDownParser(file);
+  const parser = new MarkdownParser(file);
 
   if (flags?.depth) {
     parser.setDepth(flags.depth);
@@ -42,4 +42,4 @@ const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   }
 }
 
-export = MarkdownIndexGenerator;
+export default MarkdownIndexGenerator;
