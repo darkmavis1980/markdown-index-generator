@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
-import { stringToPermalink } from '../lib/utils';
-import { isFileValid } from '../lib/file';
-import { replaceTag, replaceBlock } from '../lib/tags';
-import { INDEX_TAG } from '../constants';
+import { stringToPermalink } from '../lib/utils.js';
+import { isFileValid } from '../lib/file.js';
+import { replaceTag, replaceBlock } from '../lib/tags.js';
+import { INDEX_TAG } from '../constants.js';
 
 export class MarkdownParser {
   /**
@@ -173,5 +173,3 @@ export class MarkdownParser {
     return `${this.title}${this.links.join('\n')}`;
   }
 }
-
-export { MarkdownParser as default };
