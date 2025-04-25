@@ -16,5 +16,11 @@ describe('Utils', () => {
       expect(stringToPermalink('Hello /world!****')).toEqual('hello-world');
       expect(stringToPermalink('---Hello---world---')).toEqual('helloworld');
     });
+
+    it('should properly trim and handle multiple whitespaces', () => {
+      expect(stringToPermalink('   Heading   with    multiple    spaces   ')).toBe('heading-with-multiple-spaces');
+      expect(stringToPermalink('Heading\t\twith\ttabs')).toBe('heading-with-tabs');
+      expect(stringToPermalink('\n  Heading \n with \n newlines  \n')).toBe('heading-with-newlines');
+    });
   });
 });

@@ -1,6 +1,22 @@
 # Changelog
 
-## [v3.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.3...v3.1.0)
+## [v3.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.0...v3.1.1)
+
+### Merged
+
+- Refactor Build Process and Fix ESM Compatibility [`#71`](https://github.com/darkmavis1980/markdown-index-generator/pull/71)
+
+### Commits
+
+- test: add unit tests for ESM compatibility, import paths, and shebang handling [`efe19cd`](https://github.com/darkmavis1980/markdown-index-generator/commit/efe19cdd9cdc0f5a8812f6604e9bd4b1beac9d9d)
+- test: add unit tests for MarkdownParser to validate whitespace handling in headings [`0c7472d`](https://github.com/darkmavis1980/markdown-index-generator/commit/0c7472da7894e46ea7646cf490cc208c7520ab43)
+- chore: add index markers and update heading formatting in test markdown file [`0d44b9c`](https://github.com/darkmavis1980/markdown-index-generator/commit/0d44b9c0f4c76b40030f8edf572d88a30608e7f9)
+- test: add unit tests for stringToPermalink to handle multiple whitespaces, tabs, and newlines [`611e97e`](https://github.com/darkmavis1980/markdown-index-generator/commit/611e97e3778dfc6866c0244c8cb322c3f3ae32b5)
+- style: format whitespace handling in stringToPermalink function for consistency [`62b2915`](https://github.com/darkmavis1980/markdown-index-generator/commit/62b29159c495c71f134681b7c668ca701ed3de8b)
+- fix: replace multiple whitespaces with a single space in stringToPermalink function [`b9e88c5`](https://github.com/darkmavis1980/markdown-index-generator/commit/b9e88c5ca71af91e9307a87a6cb36f63c3f21d65)
+- fix: trim whitespace in stringToPermalink function for cleaner output [`9ab1cfe`](https://github.com/darkmavis1980/markdown-index-generator/commit/9ab1cfee056d371912979b78254a049d0b90c719)
+
+## [v3.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.3...v3.1.0) - 2025-04-25
 
 ### Merged
 
