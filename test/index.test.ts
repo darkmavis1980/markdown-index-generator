@@ -1,4 +1,5 @@
-import { MarkdownIndexGenerator } from '../src/index';
+import { jest } from '@jest/globals';
+import { MarkdownIndexGenerator } from '../src/index.js';
 
 describe('MarkdownIndexGenerator', () => {
   beforeEach(() => {

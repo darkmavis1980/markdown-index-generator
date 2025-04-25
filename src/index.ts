@@ -1,6 +1,8 @@
-import { MarkdownParser } from './classes/markdown';
-import { Flags } from './interfaces/types';
-import { DEFAULT_VALUES } from './constants';
+import { MarkdownParser } from './classes/markdown.js';
+import { Flags } from './interfaces/types.js';
+import { DEFAULT_VALUES } from './constants.js';
+
+export { MarkdownParser } from './classes/markdown.js';
 
 export const MarkdownIndexGenerator = async(file: string, flags?: Flags) => {
   if (!flags) {

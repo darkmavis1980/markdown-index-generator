@@ -1,4 +1,4 @@
-import MarkdownParser from '../../src/classes/markdown';
+import { MarkdownParser } from '../../src/classes/markdown.js';
 
 const mockFile = './test/__mocks__/test.md';
 const mockNumberedFile = './test/__mocks__/numbered.md';

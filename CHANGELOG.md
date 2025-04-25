@@ -1,6 +1,20 @@
 # Changelog
 
-## [v3.0.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.2...v3.0.3)
+## [v3.1.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.3...v3.1.0)
+
+### Merged
+
+- Bugfix/fix execution on windows [`#69`](https://github.com/darkmavis1980/markdown-index-generator/pull/69)
+
+### Commits
+
+- chore: update dependencies in package.json and package-lock.json for improved compatibility and performance [`0c5135c`](https://github.com/darkmavis1980/markdown-index-generator/commit/0c5135c9c78cfc0ac8baebfefe9b637275f51f21)
+- refactor: update import statements to use .js extensions for ESM compatibility [`f85f1e0`](https://github.com/darkmavis1980/markdown-index-generator/commit/f85f1e07012b73db5fe868baa84bb863125d491c)
+- chore: enhance Jest configuration for TypeScript support with ESM and module name mapping [`1751779`](https://github.com/darkmavis1980/markdown-index-generator/commit/17517791de65886d979c06c88fe34f3b7f64af97)
+- refactor: adjust import statements to include .js extensions for consistency and ESM compliance [`d30116f`](https://github.com/darkmavis1980/markdown-index-generator/commit/d30116f1118ec612cb0acecba24e793cbdf00c0b)
+- chore: update TypeScript module settings to NodeNext in tsconfig.json [`e204882`](https://github.com/darkmavis1980/markdown-index-generator/commit/e204882fd1d49d627942e53e5bd8b7167c054c05)
+
+## [v3.0.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.0.2...v3.0.3) - 2025-04-22
 
 ### Commits
 

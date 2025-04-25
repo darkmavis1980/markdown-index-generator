@@ -1,4 +1,4 @@
-import { INDEX_TAG } from '../constants';
+import { INDEX_TAG } from '../constants.js';
 
 /**
  * Tries to the first H2 title and adds the index tag right before it
