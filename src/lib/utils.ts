@@ -6,6 +6,7 @@
 
 export function stringToPermalink(string: string): string {
   return string
+    .trim()
     .replace(/(-)+\1+/g, '')
     .replace(/\s/g, '-')
     .replace(/[^\d\w_-]/g, '')
