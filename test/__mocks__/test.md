@@ -1,5 +1,8 @@
 # Main Title
 
+<!-- index-start -->
+<!-- index-end -->
+
 ## Heading 2
 
 Some text here
@@ -15,3 +18,5 @@ Some text here
 #### Sub sub heading 4
 
 Some random text
+
+##             Heading with spaces
