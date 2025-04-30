@@ -92,9 +92,7 @@ export class MarkdownParser {
     const currentTitle = this.title.replace(/##\s/gim, '').toLocaleLowerCase().trim();
     return links
       .map(heading => {
-        const textHeading: string = heading
-          .replace(/\s+/g, ' ')
-          .replace(/#{2,5}\s/, '');
+        const textHeading: string = heading.replace(/\s+/g, ' ').replace(/#{2,5}\s/, '');
         if (textHeading.toLocaleLowerCase() === 'index' || textHeading.toLocaleLowerCase() === currentTitle) {
           return '';
         }
