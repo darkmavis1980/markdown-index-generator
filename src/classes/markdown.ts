@@ -74,7 +74,7 @@ export class MarkdownParser {
    * @returns The style according to the type
    */
   getListStyle(text: string): string {
-    const regex = /^(\d.\s)/;
+    const regex = /^(\d+\.\s)/;
     const match = text.match(regex);
     if (match) {
       return match[1];
@@ -92,7 +92,7 @@ export class MarkdownParser {
     const currentTitle = this.title.replace(/##\s/gim, '').toLocaleLowerCase().trim();
     return links
       .map(heading => {
-        const textHeading: string = heading.replace(/#{2,5}\s/, '');
+        const textHeading: string = heading.replace(/\s+/g, ' ').replace(/#{2,5}\s/, '');
         if (textHeading.toLocaleLowerCase() === 'index' || textHeading.toLocaleLowerCase() === currentTitle) {
           return '';
         }

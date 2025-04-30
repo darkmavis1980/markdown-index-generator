@@ -39,6 +39,29 @@ describe('MarkdownParser (Class)', () => {
       const mockHeadings = ['## Heading 1', 'Some text'];
       expect(parser.getHeadings(mockHeadings).length).toEqual(1);
     });
+
+    it('should handle headings with multiple spaces', () => {
+      const parser = new MarkdownParser(mockFile);
+      const mockHeadings = ['##    Heading With Extra Spaces', '## Normal Heading', 'Some text'];
+      const result = parser.getHeadings(mockHeadings);
+      expect(result.length).toEqual(2);
+      expect(result).toContain('##    Heading With Extra Spaces');
+    });
+  });
+
+  describe('getListStyle', () => {
+    it('should detect numbered list items', () => {
+      const parser = new MarkdownParser(mockFile);
+      expect(parser.getListStyle('1. Item')).toEqual('1. ');
+      expect(parser.getListStyle('2. Item')).toEqual('2. ');
+      expect(parser.getListStyle('10. Item')).toEqual('10. ');
+    });
+
+    it('should return default bullet style for non-numbered items', () => {
+      const parser = new MarkdownParser(mockFile);
+      expect(parser.getListStyle('Normal Text')).toEqual('- ');
+      expect(parser.getListStyle('- Bulleted item')).toEqual('- ');
+    });
   });
 
   describe('parseHeadings', () => {
@@ -79,13 +102,31 @@ describe('MarkdownParser (Class)', () => {
       expect(result[1]).toEqual('  - [Heading 2](#heading-2)');
     });
 
-    it('should parse numbered heaedings', () => {
+    it('should parse numbered headings', () => {
       const parser = new MarkdownParser(mockNumberedFile);
       const mockHeadings = ['## Index', '## 1. Heading 1', '## 2. Heading 2'];
       const result = parser.parseHeadings(mockHeadings);
       expect(result.length).toEqual(2);
       expect(result[0]).toEqual('1. [Heading 1](#1-heading-1)');
       expect(result[1]).toEqual('2. [Heading 2](#2-heading-2)');
+    });
+
+    it('should handle headings with multiple spaces', () => {
+      const parser = new MarkdownParser(mockFile);
+      const mockHeadings = ['##    Heading  With   Extra    Spaces', '## Normal Heading'];
+      const result = parser.parseHeadings(mockHeadings);
+      expect(result.length).toEqual(2);
+      expect(result[0]).toEqual('- [Heading With Extra Spaces](#heading-with-extra-spaces)');
+    });
+
+    it('should filter out headings that match the custom title', () => {
+      const parser = new MarkdownParser(mockFile);
+      parser.setTitle('Custom Title');
+      const mockHeadings = ['## Custom Title', '## Heading 1', '### Heading 2'];
+      const result = parser.parseHeadings(mockHeadings);
+      expect(result.length).toEqual(2);
+      expect(result[0]).toEqual('- [Heading 1](#heading-1)');
+      expect(result[1]).toEqual('  - [Heading 2](#heading-2)');
     });
   });
 
@@ -95,6 +136,14 @@ describe('MarkdownParser (Class)', () => {
       const result = await parser.parse();
       expect(result.length).toBeGreaterThanOrEqual(5);
       expect(result[0]).toEqual('- [Heading 2](#heading-2)');
+    });
+
+    it('should handle headings with excessive whitespace', async () => {
+      const parser = new MarkdownParser(mockFile);
+      const result = await parser.parse();
+      const headingWithSpaces = result.find(link => link.includes('Heading with spaces'));
+      expect(headingWithSpaces).toBeDefined();
+      expect(headingWithSpaces).toEqual('- [Heading with spaces](#heading-with-spaces)');
     });
 
     it('should fail if the file is not found', async () => {

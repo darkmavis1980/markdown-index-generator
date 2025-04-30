@@ -1,6 +1,19 @@
 # Changelog
 
-## [v3.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.0...v3.1.1)
+## [v3.1.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.1...v3.1.2)
+
+### Merged
+
+- Fix issue with headings containing extra whitespace [`#72`](https://github.com/darkmavis1980/markdown-index-generator/pull/72)
+
+### Commits
+
+- chore: update package dependencies to latest versions [`80f4325`](https://github.com/darkmavis1980/markdown-index-generator/commit/80f4325e2fde9b96964d8357fbe81d2cce24528a)
+- test: enhance unit tests for MarkdownParser to cover numbered list detection and whitespace handling [`68c3eab`](https://github.com/darkmavis1980/markdown-index-generator/commit/68c3eab5c2043aa2c6270dc2e92619a74179a5c9)
+- refactor: streamline whitespace handling in MarkdownParser headings [`682f038`](https://github.com/darkmavis1980/markdown-index-generator/commit/682f0384e8c7d9f0f9e59fd250b99311a0fdafb1)
+- fix: improve whitespace handling in MarkdownParser headings [`a87aea6`](https://github.com/darkmavis1980/markdown-index-generator/commit/a87aea675a868df9458fb2054bb1a6b73989807d)
+
+## [v3.1.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.0...v3.1.1) - 2025-04-25
 
 ### Merged
 
@@ -12,6 +25,7 @@
 - test: add unit tests for MarkdownParser to validate whitespace handling in headings [`0c7472d`](https://github.com/darkmavis1980/markdown-index-generator/commit/0c7472da7894e46ea7646cf490cc208c7520ab43)
 - chore: add index markers and update heading formatting in test markdown file [`0d44b9c`](https://github.com/darkmavis1980/markdown-index-generator/commit/0d44b9c0f4c76b40030f8edf572d88a30608e7f9)
 - test: add unit tests for stringToPermalink to handle multiple whitespaces, tabs, and newlines [`611e97e`](https://github.com/darkmavis1980/markdown-index-generator/commit/611e97e3778dfc6866c0244c8cb322c3f3ae32b5)
+- chore: add build step to CI workflows for main and PR processes [`524289d`](https://github.com/darkmavis1980/markdown-index-generator/commit/524289d9a84a6fd29bb57b7abb8e7d6f4d6a2979)
 - style: format whitespace handling in stringToPermalink function for consistency [`62b2915`](https://github.com/darkmavis1980/markdown-index-generator/commit/62b29159c495c71f134681b7c668ca701ed3de8b)
 - fix: replace multiple whitespaces with a single space in stringToPermalink function [`b9e88c5`](https://github.com/darkmavis1980/markdown-index-generator/commit/b9e88c5ca71af91e9307a87a6cb36f63c3f21d65)
 - fix: trim whitespace in stringToPermalink function for cleaner output [`9ab1cfe`](https://github.com/darkmavis1980/markdown-index-generator/commit/9ab1cfee056d371912979b78254a049d0b90c719)
