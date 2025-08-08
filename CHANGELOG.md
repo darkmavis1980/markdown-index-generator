@@ -1,6 +1,17 @@
 # Changelog
 
-## [v3.1.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.1...v3.1.2)
+## [v3.1.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.2...v3.1.3)
+
+### Merged
+
+- Fix issue with spaces in headings and multi-digit numbered lists [`#73`](https://github.com/darkmavis1980/markdown-index-generator/pull/73)
+
+### Commits
+
+- chore: updated all dependencies to latest version [`8ffcf4c`](https://github.com/darkmavis1980/markdown-index-generator/commit/8ffcf4c6367c97674b9e311576aa06cdaf2a030d)
+- fix: compatibility issue with new version of ts-jest [`b91e91b`](https://github.com/darkmavis1980/markdown-index-generator/commit/b91e91bdf0f93bff9caf752a3928af01eb517137)
+
+## [v3.1.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.1...v3.1.2) - 2025-04-30
 
 ### Merged
 
