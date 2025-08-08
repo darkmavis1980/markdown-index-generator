@@ -12,6 +12,28 @@ Some text\n`;
       expect(result).toContain('<!-- index-start -->');
       expect(result).toContain('<!-- index-end -->');
     });
+
+    it('should not pull content from below H2 headings', () => {
+      const mockContent = `# Test
+
+## A
+
+Some H2 text that should not be pulled to heading
+
+### B - not pulled
+
+Some H3 text not pulled to heading
+
+## C
+
+### D - H3 should not be pulled because parent H2 has no text`;
+
+      const result = findFirstParagraph(mockContent);
+      expect(result).toContain('## A\n\nSome H2 text that should not be pulled to heading');
+      expect(result).toContain('## C\n\n### D - H3 should not be pulled because parent H2 has no text');
+      expect(result).not.toContain('## ASome H2 text');
+      expect(result).not.toContain('## C### D');
+    });
   });
 
   describe('replacetag (Function)', () => {
