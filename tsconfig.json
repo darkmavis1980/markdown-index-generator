@@ -4,6 +4,7 @@
     "importHelpers": true,
     "esModuleInterop": true,
     "moduleResolution": "NodeNext",
+    "isolatedModules": true,
     "module": "NodeNext",
     "outDir": "lib",
     "rootDir": "src",
