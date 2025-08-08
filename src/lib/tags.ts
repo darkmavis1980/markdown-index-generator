@@ -6,10 +6,21 @@ import { INDEX_TAG } from '../constants.js';
  * @returns The updated text
  */
 export const findFirstParagraph = (text: string): string => {
-  const regex = /^(##\s.+)\n{1,3}/gm;
-  const split = text.split(regex);
-  split.splice(1, 0, `<!-- ${INDEX_TAG}-start -->\n<!-- ${INDEX_TAG}-end -->\n\n`);
-  return split.join('');
+  const regex = /^(##\s.+)(\n{1,3})/gm;
+  const match = regex.exec(text);
+
+  if (!match) {
+    return text;
+  }
+
+  const matchStart = match.index;
+  const matchEnd = match.index + match[0].length;
+
+  const beforeMatch = text.substring(0, matchStart);
+  const headingAndNewlines = match[0];
+  const afterMatch = text.substring(matchEnd);
+
+  return `${beforeMatch}<!-- ${INDEX_TAG}-start -->\n<!-- ${INDEX_TAG}-end -->\n\n${headingAndNewlines}${afterMatch}`;
 };
 
 /**

@@ -1,6 +1,17 @@
 # Changelog
 
-## [v3.1.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.2...v3.1.3)
+## [v3.1.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.3...v3.1.4)
+
+### Merged
+
+- Bugfix/august 2025 maintenance update [`#78`](https://github.com/darkmavis1980/markdown-index-generator/pull/78)
+
+### Commits
+
+- test: add unit test to cover issue #75 case [`c488e07`](https://github.com/darkmavis1980/markdown-index-generator/commit/c488e07f6951826598f9960840d9de7c86a55620)
+- fix: issue #75 [`8ff786e`](https://github.com/darkmavis1980/markdown-index-generator/commit/8ff786ea97e693453efcabb98054fb0a51a78c1a)
+
+## [v3.1.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.2...v3.1.3) - 2025-08-08
 
 ### Merged
 
@@ -9,6 +20,7 @@
 ### Commits
 
 - chore: updated all dependencies to latest version [`8ffcf4c`](https://github.com/darkmavis1980/markdown-index-generator/commit/8ffcf4c6367c97674b9e311576aa06cdaf2a030d)
+- fix: update supported node.js runtime versions [`121f2b6`](https://github.com/darkmavis1980/markdown-index-generator/commit/121f2b6fbf6f069993f02259610acbc7d39302ad)
 - fix: compatibility issue with new version of ts-jest [`b91e91b`](https://github.com/darkmavis1980/markdown-index-generator/commit/b91e91bdf0f93bff9caf752a3928af01eb517137)
 
 ## [v3.1.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.1...v3.1.2) - 2025-04-30
