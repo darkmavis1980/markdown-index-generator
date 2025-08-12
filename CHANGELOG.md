@@ -1,6 +1,19 @@
 # Changelog
 
-## [v3.1.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.3...v3.1.4)
+## [v3.2.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.4...v3.2.0)
+
+### Merged
+
+- Bugfix/fix issue 75 [`#79`](https://github.com/darkmavis1980/markdown-index-generator/pull/79)
+
+### Commits
+
+- chore: update package dependencies to latest versions, including tsx, eslint, and typescript-eslint [`0ea8871`](https://github.com/darkmavis1980/markdown-index-generator/commit/0ea88716e5763cc3d1dd74a8ee709633a3833c84)
+- test: remove unused replaceBlock import and update test cases for consistency [`25fff82`](https://github.com/darkmavis1980/markdown-index-generator/commit/25fff8222919d4c665ebe36aca9b3d353b5d6424)
+- refactor: improve MarkdownParser heading extraction and code block handling [`9c7c3ca`](https://github.com/darkmavis1980/markdown-index-generator/commit/9c7c3ca7289e69ad81e85afc81bb8e1d730d5bc9)
+- refactor: enhance stringToPermalink function to handle HTML tags, Markdown links, and trailing hyphens [`c7386fb`](https://github.com/darkmavis1980/markdown-index-generator/commit/c7386fb22ccd821c675fdf409ba2bc154aa29b60)
+
+## [v3.1.4](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.3...v3.1.4) - 2025-08-08
 
 ### Merged
 

@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import { stringToPermalink } from '../lib/utils.js';
 import { isFileValid } from '../lib/file.js';
-import { replaceTag, replaceBlock } from '../lib/tags.js';
+import { replaceTag } from '../lib/tags.js';
 import { INDEX_TAG } from '../constants.js';
 
 export class MarkdownParser {
@@ -64,8 +64,8 @@ export class MarkdownParser {
    * @returns The filtered out array
    */
   getHeadings(lines: string[]): string[] {
-    const regex = new RegExp(`(^#{2,${this.depth}}\\s[\\w\\s]+)`, 'gm');
-    return lines.filter(line => line.match(regex));
+    const regex = new RegExp(`^#{2,${this.depth}}\\s.+`);
+    return lines.filter(line => regex.test(line));
   }
 
   /**
@@ -100,7 +100,9 @@ export class MarkdownParser {
         const hashes = (heading.match(/#/g) || []).length;
         const indents = hashes <= 2 ? 0 : hashes - 2;
         const listStyle = this.getListStyle(textHeading);
-        const link = `${'  '.repeat(indents)}${listStyle}[${textHeading.replace(listStyle, '')}](#${stringToPermalink(textHeading)})`;
+        const linkText = textHeading.replace(listStyle, '');
+        const linkPermalink = stringToPermalink(textHeading);
+        const link = `${'  '.repeat(indents)}${listStyle}[${linkText}](#${linkPermalink})`;
         return link;
       })
       .filter(heading => heading !== '');
@@ -116,7 +118,16 @@ export class MarkdownParser {
       const data = await fs.readFile(this.file);
       const decoded = data.toString('utf8');
       this.fileCache = decoded;
-      const markdown: string[] = [...replaceBlock(decoded, '```').split('\n')];
+      const lines = decoded.split('\n');
+      const markdown: string[] = [];
+      let inCodeBlock = false;
+      for (const line of lines) {
+        if (line.trim().startsWith('```')) {
+          inCodeBlock = !inCodeBlock;
+        } else if (!inCodeBlock) {
+          markdown.push(line);
+        }
+      }
       const links = this.getHeadings(markdown);
       this.links = this.parseHeadings(links);
       return this.links;

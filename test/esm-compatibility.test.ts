@@ -2,7 +2,7 @@ import { jest } from '@jest/globals';
 import { MarkdownIndexGenerator, MarkdownParser } from '../src/index.js';
 import { stringToPermalink } from '../src/lib/utils.js';
 import { isFileValid } from '../src/lib/file.js';
-import { replaceTag, replaceBlock } from '../src/lib/tags.js';
+import { replaceTag } from '../src/lib/tags.js';
 
 describe('ESM Compatibility', () => {
   test('All exported modules can be imported correctly', () => {
@@ -12,7 +12,6 @@ describe('ESM Compatibility', () => {
     expect(typeof stringToPermalink).toBe('function');
     expect(typeof isFileValid).toBe('function');
     expect(typeof replaceTag).toBe('function');
-    expect(typeof replaceBlock).toBe('function');
   });
 
   test('MarkdownParser can be instantiated', () => {
