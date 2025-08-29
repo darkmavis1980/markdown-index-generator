@@ -1,6 +1,18 @@
 # Changelog
 
-## [v3.2.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.4...v3.2.0)
+## [v3.2.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.0...v3.2.1)
+
+### Merged
+
+- Bugfix/fix issue 77 [`#80`](https://github.com/darkmavis1980/markdown-index-generator/pull/80)
+
+### Commits
+
+- docs: add GEMINI.md for project overview, installation, usage, and development conventions [`20e1c45`](https://github.com/darkmavis1980/markdown-index-generator/commit/20e1c457da7184d6a080ec93eb47c464b875369b)
+- test: add unit test for handling mixed line endings in MarkdownParser [`78ce9f5`](https://github.com/darkmavis1980/markdown-index-generator/commit/78ce9f5b07df3d7eb3c297e728179b4c6784838d)
+- fix: normalize line endings in MarkdownParser to ensure consistent splitting of lines [`785ff7f`](https://github.com/darkmavis1980/markdown-index-generator/commit/785ff7f4c97c9405243cab5bd54aab2ba76cdbaf)
+
+## [v3.2.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.1.4...v3.2.0) - 2025-08-12
 
 ### Merged
 

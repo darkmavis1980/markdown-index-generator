@@ -118,7 +118,7 @@ export class MarkdownParser {
       const data = await fs.readFile(this.file);
       const decoded = data.toString('utf8');
       this.fileCache = decoded;
-      const lines = decoded.split('\n');
+      const lines = decoded.replace(/\r\n|\r/g, '\n').split('\n');
       const markdown: string[] = [];
       let inCodeBlock = false;
       for (const line of lines) {
