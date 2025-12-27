@@ -1,6 +1,16 @@
 # Changelog
 
-## [v3.2.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.0...v3.2.1)
+## [v3.2.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.1...v3.2.2)
+
+### Merged
+
+- Bugfix/fix issue 74 [`#81`](https://github.com/darkmavis1980/markdown-index-generator/pull/81)
+
+### Commits
+
+- fix: update dependencies and fixed vulnerabilities [`59a4d0e`](https://github.com/darkmavis1980/markdown-index-generator/commit/59a4d0e782c6bff7970980b12ac03a2c958acb7d)
+
+## [v3.2.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.0...v3.2.1) - 2025-08-29
 
 ### Merged
 
@@ -8,6 +18,7 @@
 
 ### Commits
 
+- chore: update package dependencies to latest versions, including @babel/preset-env, @types/node, eslint, jest, and typescript-eslint [`3eb0d86`](https://github.com/darkmavis1980/markdown-index-generator/commit/3eb0d867ee961b06745905c8904ec763ef7a7254)
 - docs: add GEMINI.md for project overview, installation, usage, and development conventions [`20e1c45`](https://github.com/darkmavis1980/markdown-index-generator/commit/20e1c457da7184d6a080ec93eb47c464b875369b)
 - test: add unit test for handling mixed line endings in MarkdownParser [`78ce9f5`](https://github.com/darkmavis1980/markdown-index-generator/commit/78ce9f5b07df3d7eb3c297e728179b4c6784838d)
 - fix: normalize line endings in MarkdownParser to ensure consistent splitting of lines [`785ff7f`](https://github.com/darkmavis1980/markdown-index-generator/commit/785ff7f4c97c9405243cab5bd54aab2ba76cdbaf)
