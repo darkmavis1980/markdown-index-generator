@@ -1,6 +1,18 @@
 # Changelog
 
-## [v3.2.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.1...v3.2.2)
+## [v3.2.3](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.2...v3.2.3)
+
+### Merged
+
+- Bugfix/fix vulnerabilities 271225 [`#84`](https://github.com/darkmavis1980/markdown-index-generator/pull/84)
+
+### Commits
+
+- chore: update dependencies in package.json [`97d3582`](https://github.com/darkmavis1980/markdown-index-generator/commit/97d3582600084fe7949b8205c99d5295823b1c1f)
+- fix: update @types/node and globals dependencies to latest versions [`d9d7cca`](https://github.com/darkmavis1980/markdown-index-generator/commit/d9d7ccaa6699010c384930f42d106ea239e26a60)
+- fix: update release workflow for npm deployment and permissions [`61ba40c`](https://github.com/darkmavis1980/markdown-index-generator/commit/61ba40c2274bda136ec7bf41b83417de621f7888)
+
+## [v3.2.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.1...v3.2.2) - 2025-12-27
 
 ### Merged
 
