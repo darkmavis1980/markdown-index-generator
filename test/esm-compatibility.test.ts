@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { MarkdownIndexGenerator, MarkdownParser } from '../src/index.js';
 import { stringToPermalink } from '../src/lib/utils.js';
 import { isFileValid } from '../src/lib/file.js';

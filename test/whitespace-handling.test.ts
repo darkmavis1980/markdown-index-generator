@@ -1,4 +1,3 @@
-import { jest } from '@jest/globals';
 import { MarkdownParser } from '../src/classes/markdown.js';
 
 describe('Whitespace Handling in Headings', () => {
