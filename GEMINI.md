@@ -59,7 +59,7 @@ npm run prettier:check
 
 - The project uses TypeScript for static typing.
 - Code is formatted with Prettier and linted with ESLint.
-- Tests are written with Jest.
+- Tests are written with Vitest.
 - The project follows the standard Node.js project structure with `src` for source code and `test` for tests.
 - The `main` entry point is `lib/index.js`, which is the compiled version of `src/index.ts`.
 - The executable is located in the `bin` directory.

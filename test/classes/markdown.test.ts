@@ -1,9 +1,39 @@
+import { promises as fs } from 'fs';
+import os from 'os';
+import path from 'path';
+import { vi } from 'vitest';
 import { MarkdownParser } from '../../src/classes/markdown.js';
 
 const mockFile = './test/__mocks__/test.md';
 const mockNumberedFile = './test/__mocks__/numbered.md';
 
+/**
+ * Creates a throwaway markdown file in the OS temp folder, so tests that write
+ * to disk never touch the fixtures in __mocks__
+ */
+const createTempFile = async (content: string, name = 'temp.md'): Promise<string> => {
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'md-index-'));
+  const file = path.join(dir, name);
+  await fs.writeFile(file, content);
+  return file;
+};
+
 describe('MarkdownParser (Class)', () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  describe('constructor', () => {
+    it('should throw an error if the file is not a markdown file', () => {
+      expect(() => new MarkdownParser('somefile.txt')).toThrow('File is not valid');
+    });
+
+    it('should accept both md and mdx files', () => {
+      expect(() => new MarkdownParser('somefile.md')).not.toThrow();
+      expect(() => new MarkdownParser('somefile.mdx')).not.toThrow();
+    });
+  });
+
   describe('setTitle', () => {
     it('should set the title', async () => {
       const parser = new MarkdownParser(mockFile);
@@ -119,6 +149,12 @@ describe('MarkdownParser (Class)', () => {
       expect(result[0]).toEqual('- [Heading With Extra Spaces](#heading-with-extra-spaces)');
     });
 
+    it('should not indent a line without hashes', () => {
+      const parser = new MarkdownParser(mockFile);
+      const result = parser.parseHeadings(['Just a line']);
+      expect(result).toEqual(['- [Just a line](#just-a-line)']);
+    });
+
     it('should filter out headings that match the custom title', () => {
       const parser = new MarkdownParser(mockFile);
       parser.setTitle('Custom Title');
@@ -148,7 +184,101 @@ describe('MarkdownParser (Class)', () => {
 
     it('should fail if the file is not found', async () => {
       const parser = new MarkdownParser('sometest.md');
-      expect(await parser.parse().catch).toBeDefined();
+      await expect(parser.parse()).rejects.toThrow(/no such file or directory/);
+    });
+
+    it('should ignore the headings inside of a code block', async () => {
+      const file = await createTempFile(
+        ['# Main Title', '', '## Real Heading', '', '```md', '## Fake Heading', '```', '', '## Another Real'].join(
+          '\n',
+        ),
+      );
+      const parser = new MarkdownParser(file);
+      const result = await parser.parse();
+      expect(result).toEqual(['- [Real Heading](#real-heading)', '- [Another Real](#another-real)']);
+    });
+
+    it('should return an empty list if the failure is not an Error', async () => {
+      vi.spyOn(fs, 'readFile').mockRejectedValue('a plain string rejection');
+      const parser = new MarkdownParser(mockFile);
+      await expect(parser.parse()).resolves.toEqual([]);
+    });
+  });
+
+  describe('toView', () => {
+    it('should return the title followed by the links', async () => {
+      const parser = new MarkdownParser(mockFile);
+      const links = await parser.parse();
+      expect(parser.toView()).toEqual(`## Index\n\n${links.join('\n')}`);
+    });
+  });
+
+  describe('toFile', () => {
+    it('should save the index to the given file', async () => {
+      const output = path.join(await fs.mkdtemp(path.join(os.tmpdir(), 'md-index-')), 'output.md');
+      const parser = new MarkdownParser(mockFile);
+      await parser.parse();
+      await parser.toFile(output);
+
+      const saved = await fs.readFile(output, 'utf8');
+      expect(saved).toContain('## Index');
+      expect(saved).toContain('- [Heading 2](#heading-2)');
+    });
+
+    it('should throw an error if the file cannot be written', async () => {
+      const parser = new MarkdownParser(mockFile);
+      await parser.parse();
+      await expect(parser.toFile('./this/folder/does/not/exist.md')).rejects.toThrow(/no such file or directory/);
+    });
+
+    it('should swallow a failure that is not an Error', async () => {
+      const parser = new MarkdownParser(mockFile);
+      await parser.parse();
+      vi.spyOn(fs, 'writeFile').mockRejectedValue('a plain string rejection');
+      await expect(parser.toFile('output.md')).resolves.toBeUndefined();
+    });
+  });
+
+  describe('replaceOriginal', () => {
+    it('should write the index between the existing tags', async () => {
+      const file = await createTempFile(
+        ['# Main Title', '', '<!-- index-start -->', '<!-- index-end -->', '', '## Heading 2', '', 'Some text'].join(
+          '\n',
+        ),
+      );
+      const parser = new MarkdownParser(file);
+      await parser.parse();
+      await parser.replaceOriginal();
+
+      const updated = await fs.readFile(file, 'utf8');
+      expect(updated).toContain('<!-- index-start -->\n## Index\n\n- [Heading 2](#heading-2)\n<!-- index-end -->');
+      expect(updated).toContain('## Heading 2');
+    });
+
+    it('should add the tags before the first H2 if they are missing', async () => {
+      const file = await createTempFile(['# Main Title', '', '## Heading 2', '', 'Some text'].join('\n'));
+      const parser = new MarkdownParser(file);
+      await parser.parse();
+      await parser.replaceOriginal();
+
+      const updated = await fs.readFile(file, 'utf8');
+      expect(updated).toContain('<!-- index-start -->');
+      expect(updated).toContain('- [Heading 2](#heading-2)');
+      expect(updated).toContain('<!-- index-end -->');
+    });
+
+    it('should throw an error if the file cannot be written', async () => {
+      const parser = new MarkdownParser(mockFile);
+      await parser.parse();
+      vi.spyOn(fs, 'writeFile').mockRejectedValue(new Error('EACCES: permission denied'));
+      await expect(parser.replaceOriginal()).rejects.toThrow('EACCES: permission denied');
+    });
+
+    it('should swallow a failure that is not an Error', async () => {
+      const parser = new MarkdownParser(mockFile);
+      await parser.parse();
+      vi.spyOn(fs, 'writeFile').mockRejectedValue('a plain string rejection');
+      await expect(parser.replaceOriginal()).resolves.toBeUndefined();
     });
   });
 });

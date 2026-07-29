@@ -19,6 +19,12 @@ describe('tags.ts', () => {
       expect(result).not.toContain('## ASome H2 text');
       expect(result).not.toContain('## C### D');
     });
+
+    it('should return the text untouched if there is no H2 heading', () => {
+      const mockContent = `# Some title\n\nA paragraph\n### Only an H3\n`;
+
+      expect(findFirstParagraph(mockContent)).toEqual(mockContent);
+    });
   });
 
   describe('replacetag (Function)', () => {
@@ -36,6 +42,14 @@ describe('tags.ts', () => {
       const mockContent2 = `# Some Title\n      Some test`;
 
       expect(() => replaceTag(mockContent2, 'test', 'hello')).toThrow();
+    });
+
+    it('should add the index tags before the first H2 if they are missing', () => {
+      const mockContent = `# Some Title\n\n## Subtitle\n\nSome text`;
+      const result = replaceTag(mockContent, 'index', '## Index\n\n- [Subtitle](#subtitle)');
+
+      expect(result).toContain('<!-- index-start -->\n## Index\n\n- [Subtitle](#subtitle)\n<!-- index-end -->');
+      expect(result).toContain('## Subtitle');
     });
   });
   describe('replaceBlock (Function)', () => {

@@ -9,7 +9,6 @@ const tsFiles = ['{src,test}/**/*.ts'];
 const languageOptions = {
     globals: {
         ...globals.node,
-        ...globals.jest,
     },
     ecmaVersion: 2023,
     sourceType: 'module',

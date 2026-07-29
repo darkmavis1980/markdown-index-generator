@@ -16,16 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 20, 22, 24 ]
+        node: [ 22, 24, 26 ]
 
     name: Build for Node ${{ matrix.node }} version
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Runs a single command using the runners shell
       - name: Run unit tests
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
