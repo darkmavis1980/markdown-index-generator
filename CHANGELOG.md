@@ -1,6 +1,18 @@
 # Changelog
 
-## [v3.2.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.4...v3.2.5)
+## [v3.3.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.5...v3.3.0)
+
+### Merged
+
+- Bugfix/maintenance 07062026 [`#87`](https://github.com/darkmavis1980/markdown-index-generator/pull/87)
+
+### Commits
+
+- chore: update dependencies and switch testing framework to Vitest [`faf2723`](https://github.com/darkmavis1980/markdown-index-generator/commit/faf272399c1b38e22fcb6a5eb98ec7bc3bfe2e30)
+- chore: migrate tests from Jest to Vitest and update related configurations [`83eb01f`](https://github.com/darkmavis1980/markdown-index-generator/commit/83eb01f23f8324dcf96ed0468acb02a5775c74e4)
+- chore: replace Jest with Vitest for testing framework and update configuration [`f9ded50`](https://github.com/darkmavis1980/markdown-index-generator/commit/f9ded501738514307687ec97eee9ee3164d608ef)
+
+## [v3.2.5](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.4...v3.2.5) - 2026-06-07
 
 ### Merged
 
