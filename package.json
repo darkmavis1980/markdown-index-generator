@@ -9,28 +9,23 @@
   },
   "bugs": "https://github.com/experimental/markdown-index-generator/issues",
   "dependencies": {
-    "commander": "^14.0.3",
+    "commander": "^15.0.0",
     "tslib": "^2.8.1",
-    "tsx": "^4.22.4"
+    "tsx": "^4.23.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.29.7",
     "@eslint/js": "^9.23.0",
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^24.13.1",
+    "@types/node": "^24.13.3",
     "@typescript-eslint/parser": "^8.28.0",
+    "@vitest/coverage-v8": "^4.1.10",
     "auto-changelog": "^2.6.0",
-    "eslint": "^9.39.4",
+    "eslint": "^9.39.5",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "^17.6.0",
-    "jest": "^30.4.2",
-    "nyc": "^18.0.0",
-    "prettier": "^3.8.3",
-    "ts-jest": "^29.4.11",
-    "ts-node": "^10.9.2",
+    "globals": "^17.8.0",
+    "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.60.1"
+    "typescript-eslint": "^8.65.0",
+    "vitest": "^4.1.10"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -52,14 +47,14 @@
     "build": "tsc -b",
     "build:watch": "tsc -b --watch",
     "prepack": "rm -rf lib && npm run build",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose",
-    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "changelog": "auto-changelog",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "eslint": "npx eslint -c eslint.config.mjs",
     "prettier:check": "npx prettier ./src/**/*.ts ./test/**/*.test.ts --check",
     "prettier:write": "npx prettier ./src/**/*.ts ./test/**/*.test.ts --write",
-    "coverage": "NODE_OPTIONS=--experimental-vm-modules nyc --reporter=lcov npm run test"
+    "coverage": "COVERAGE_THRESHOLDS=true vitest run --coverage"
   },
   "types": "lib/index.d.ts",
   "auto-changelog": {
