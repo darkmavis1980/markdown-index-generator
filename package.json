@@ -11,7 +11,7 @@
   "dependencies": {
     "commander": "^15.0.0",
     "tslib": "^2.8.1",
-    "tsx": "^4.23.1"
+    "tsx": "^4.23.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
@@ -21,10 +21,10 @@
     "auto-changelog": "^2.6.0",
     "eslint": "^9.39.5",
     "eslint-plugin-import": "^2.32.0",
-    "globals": "^17.8.0",
+    "globals": "^17.11.0",
     "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.65.0",
+    "typescript-eslint": "^8.67.0",
     "vitest": "^4.1.10"
   },
   "engines": {
