@@ -1,6 +1,17 @@
 # Changelog
 
-## [v3.3.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.5...v3.3.0)
+## [v3.3.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.3.0...v3.3.1)
+
+### Merged
+
+- Feature/replace jest with vitest [`#88`](https://github.com/darkmavis1980/markdown-index-generator/pull/88)
+
+### Commits
+
+- chore: update dependencies [`3209a4b`](https://github.com/darkmavis1980/markdown-index-generator/commit/3209a4bdfadb4027444322b374e24b2358a11c8b)
+- chore: update Node.js versions and upgrade action versions in workflows [`810e24d`](https://github.com/darkmavis1980/markdown-index-generator/commit/810e24d3074aa583ed5db6aaf5022819501957e7)
+
+## [v3.3.0](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.2.5...v3.3.0) - 2026-07-29
 
 ### Merged
 
