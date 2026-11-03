@@ -1,6 +1,13 @@
 # Changelog
 
-## [v3.3.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.3.0...v3.3.1)
+## [v3.3.2](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.3.1...v3.3.2)
+
+### Commits
+
+- chore: update dependencies in package.json [`626e12a`](https://github.com/darkmavis1980/markdown-index-generator/commit/626e12abc84d46aed7b05814956e9aefc0987936)
+- chore: update vitest and coverage-v8 to version 5.1.0 in package.json and package-lock.json [`cae2911`](https://github.com/darkmavis1980/markdown-index-generator/commit/cae2911a3dfa4a50e397e6be858b580e50f32c4a)
+
+## [v3.3.1](https://github.com/darkmavis1980/markdown-index-generator/compare/v3.3.0...v3.3.1) - 2026-08-21
 
 ### Merged
 
